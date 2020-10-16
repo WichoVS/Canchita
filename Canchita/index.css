@@ -148,6 +148,7 @@ font-size: 18px;
 
 .Deportes-Seccion{
   justify-content: space-between;
+  margin-bottom: 50px;
 }
 
 .Deportes-Seccion>.left{
@@ -179,4 +180,75 @@ font-size: 18px;
 
 .Deportes-Seccion>.right{
   width: 49%;
+  align-content: space-between;
+  flex-flow: column;
+}
+
+
+.Deportes-Seccion>.right>.noticia-pequeña{
+  height: 25%;
+  width: 100%;
+  flex-flow: column;
+}
+
+.Deportes-Seccion>.right>.noticia-pequeña>h1{
+  color: #330A0A;
+}
+
+.Deportes-Seccion>.right>.noticia-pequeña>p{
+  color: #330A0A;
+  font-size: 12px;
+}
+
+.Esports-Seccion{
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.Esports-Seccion>.left{
+  width: 49%;
+  align-content: space-between;
+  flex-flow: column;
+}
+
+.Esports-Seccion>.left>.noticia-pequeña{
+  height: 25%;
+  width: 100%;
+  flex-flow: column;
+}
+
+.Esports-Seccion>.left>.noticia-pequeña>h1{
+  color: #330A0A;
+}
+
+.Esports-Seccion>.left>.noticia-pequeña>p{
+  color: #330A0A;
+  font-size: 12px;
+}
+
+.Esports-Seccion>.right{
+  width: 49%;
+  height: 400px;
+  background: url(http://placecorgi.com/800/400);
+  justify-content: flex-end;
+  flex-flow: column;
+}
+
+.Esports-Seccion>.right>.noticia-datos{
+  flex-flow: column;
+  background-color: #330A0A;
+  opacity: 0.6;
+  height: 15%;
+  width: 100%;
+}
+
+.Esports-Seccion>.right>.noticia-datos>.titulo{
+  font-size: 30px;
+  color: white;
+  font-weight: bold;
+}
+
+.Esports-Seccion>.right>.noticia-datos>.desc{
+  font-size: 20px;
+  color: white;
 }
