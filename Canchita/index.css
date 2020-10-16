@@ -69,6 +69,10 @@ a {
   width: 25%;
 }
 
+.headerbox>.navopc>a:hover{
+  background-color: #140202;
+}
+
 .headerbox > .logo > a >.imagen {
   width: 50%;
   height: 80%;
