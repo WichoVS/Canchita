@@ -62,7 +62,14 @@ a {
   width: 50%;
 }
 
-.headerbox > .logo > .imagen {
+.headerbox>.navopc>a{
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  width: 25%;
+}
+
+.headerbox > .logo > a >.imagen {
   width: 50%;
   height: 80%;
 }
@@ -79,8 +86,7 @@ a {
   justify-content: center;
   align-content: center;
   flex-flow: column;
-  background-color: #330a0a;
-  opacity: 0.6;
+  background-color: rgb(51, 10, 10,0.6);
   height: 100px;
 }
 
@@ -164,8 +170,7 @@ a {
 
 .Deportes-Seccion > .left > .noticia-datos {
   flex-flow: column;
-  background-color: #330a0a;
-  opacity: 0.6;
+  background-color: rgb(51, 10, 10,0.6);
   height: 15%;
   width: 100%;
 }
@@ -238,8 +243,7 @@ a {
 
 .Esports-Seccion > .right > .noticia-datos {
   flex-flow: column;
-  background-color: #330a0a;
-  opacity: 0.6;
+  background-color: rgb(51, 10, 10,0.6);
   height: 15%;
   width: 100%;
 }
