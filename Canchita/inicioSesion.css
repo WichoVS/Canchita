@@ -187,4 +187,5 @@ input[type=submit]{
     text-transform: uppercase;
     border: none;
     cursor: pointer;
+    border-radius: 40px;
 }
