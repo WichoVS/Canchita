@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="inicioSesion.css">
-    <title>Inicio Sesión</title>
+    <link rel="stylesheet" href="Registro.css">
+    <title>Registro</title>
 </head>
 <body>
     <div class="header">
@@ -26,19 +26,27 @@
           </div>
         </div>
       </div>
-      <div class="inicio-sesion container row">
-        <div class="ilustracion-left container">imagenxd</div>
-        <div class="datos container">
-            <h1 class="">Inicio de Sesión</h1>
-            <form class="container" action="">
-                <label for="input-usuario">Nombre de Usuario: </label>
-                <input type="text" name="input-usuario" class="input-usuario">
-                <label for="input-contra">Contraseña: </label>
-                <input type="password" name="input-contra" class="input-contra">
-                <input type="submit" value="Iniciar Sesión">
-            </form>
-           <h2><a href="">Registrarse</a></h2> 
-        </div>
+      <div class="registro container row">
+          <div class="ilustracion-left"></div>
+          <div class="registro-datos container">
+              <h1>Registro</h1>
+              <form class="container" action="">
+                  <label for="input-correo-r">Correo Electrónico: </label>
+                  <input type="text" name="input-correo-r" class="input-correo-r">
+                  <label for="input-usuario">Nombre de Usuario: </label>
+                  <input type="text" name="input-usuario-r" class="input-usuario-r">
+                  <label for="input-password-r">Contraseña: </label>
+                  <input type="password" name="input-password-r" id="input-password-r">
+                  <label for="rs-twitter">Twitter: </label>
+                  <input type="text" name="rs-twitter" class="rs-twitter">
+                  <label for="rs-facebook">Facebook: </label>
+                  <input type="text" name="rs-facebook" class="rs-facebook">
+                  <img class="registro-img-user container" src="http://placecorgi.com/256/256" alt="userImagen">
+                  <input type="file" name="" id="">
+                  <input type="submit" value="Registrarse">
+              </form>
+          </div>
+          <div class="ilustracion-right"></div>
       </div>
       <div class="footer">
         <div class="wrapper">
