@@ -7,6 +7,7 @@ html {
 *:before,
 *:after {
   box-sizing: inherit;
+
 }
 
 body {
@@ -189,3 +190,5 @@ input[type=submit]{
     cursor: pointer;
     border-radius: 40px;
 }
+
+/* coment */
