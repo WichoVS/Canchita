@@ -1,0 +1,395 @@
+html {
+    box-sizing: border-box;
+  }
+  /* inherit border-box on all elements in the universe and before and after
+     */
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+  
+  body {
+    font-family: Arial, Geneva, sans-serif;
+    margin: 0;
+  }
+  a {
+    color: white;
+    font-size: 25px;
+    text-decoration: none;
+  }
+  .wrapper {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    float: none;
+    background-color: #fff;
+  }
+  
+  .row::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  .container {
+    display: flex;
+  }
+  
+  .header {
+    background-color: #330a0a;
+    width: 100%;
+    margin-top: 0;
+    height: 125px;
+  }
+  
+  .headerbox {
+    background-color: #330a0a;
+    width: 100%;
+    margin-top: 0;
+    height: 125px;
+    flex-direction: row;
+  }
+  
+  .headerbox > .logo {
+    align-items: center;
+    width: 50%;
+  }
+  
+  .headerbox > .navopc {
+    align-items: center;
+    justify-content: space-around;
+    width: 50%;
+  }
+  
+  .headerbox>.navopc>a{
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+  }
+  
+  .headerbox>.navopc>a:hover{
+    background-color: #140202;
+  }
+  
+  .headerbox > .logo > a >.imagen {
+    width: 50%;
+    height: 80%;
+  }
+  
+  
+  
+  .footer {
+    background-color: #330a0a;
+    width: 100%;
+    height: auto;
+  }
+  
+  .footer-box {
+    width: 100%;
+  }
+  
+  .footer-box > .left {
+    width: 30%;
+    margin: 0 0;
+    flex-flow: column;
+    background-color: #330a0a;
+  }
+  
+  .footer-box > .right {
+    flex-flow: column;
+    width: 70%;
+    background-color: #330a0a;
+  }
+  
+  .footer-box > .right > h3 > a {
+    font-size: 18px;
+  }
+  
+  .footer-box > .right > h2 {
+    font-size: 30px;
+    color: white;
+  }
+  
+  .footer-box > .left > img {
+    width: 80%;
+    margin-top: 4%;
+  }
+  
+  .footer-box > .left > p {
+    width: 60%;
+    color: white;
+    font-size: large;
+  }
+  
+  .content {
+      width: 100%;
+      height: auto;
+
+  }
+  .content_center{
+      margin-left: auto;
+      margin-right: auto;
+      padding-bottom: 10%;
+     width: 90%;
+     height: auto;
+     margin-bottom: 10%;
+
+  }
+  
+  .details {
+   color: #330a0a;
+    font-size: 16px;
+      width: 100%;
+      height: 90px;
+    position: relative;
+      background-color: #fff;
+  }
+
+p.date {
+    position: absolute;
+    top: 0px;
+    left: 10px;
+  }
+
+  p.place {
+      position: absolute;
+      top: 0px;
+      right: 10px;
+  }
+.image_main{
+    position: relative;
+   
+}
+  
+  .image_main > img {
+   
+      width: 100%;
+      height: 90%;
+  }
+
+ 
+
+  .image_main > div {
+       position: absolute;
+      font-size: 24px;
+      margin-top: 0px;
+      width: 100%;
+      height: 17%;
+      padding-top:20px;
+      padding-left: 15px;
+      background-color: #330a0a;
+      color: white;
+      opacity: 60%;
+      
+  }
+  .image_main > div >p{
+      position: absolute;
+      width: 100%;
+      height: auto;
+      padding : 0px;
+      margin : 0px;
+  }
+  .content_news {
+    width: 100%;
+    height: auto;
+    padding: 0px;
+    margin: 0px;
+    
+}
+
+.news_info{
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    height: auto;
+    padding: 5%;
+  
+}
+
+.news_info > p{
+  display:inline-block;
+    color: #330a0a ;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0px;
+    padding: 0px;
+    
+}
+p.rating{
+  float: right;
+padding-right: 5px;
+}
+
+.news_info > svg{
+ float: right;
+ margin-right: 5px;
+
+}
+
+  p.datanews{
+    display: block;
+    font-size: 18px;
+    color: grey;
+    margin-bottom: 20px;
+  }
+
+  p.textos{
+    font-size: 18px;
+    color: black ;
+    
+  padding: 20px; 
+ }
+
+  div.div_image{
+padding: 10%;
+   
+    
+  }
+img.image_news{
+  width: 100%;
+  height: auto;
+
+}
+  
+div.div_video{
+  width: auto;
+height: auto;
+      background-color: black;
+      color: white;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .valoracion>p{
+      text-align: center;
+      color: #330a0a;
+      font-size: 30px;
+      margin: 5%;
+    }
+
+
+
+.comparte>div{
+display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-color: #330a0a;
+  border-radius: 25px;
+  margin-left: 10%;
+  margin-right: 10%;
+
+}
+
+.comentarios{
+  display: inline-block;
+  color: #330a0a;
+  font-size: 20px;
+}
+
+.comentarios>p{
+  color: #330a0a;
+  font-size: 30px;
+}
+
+.comentarios>textarea{
+  
+  width: 100%;
+  font-size: 100%;
+  border-color: #330a0a;
+  border-width: 2px;
+}
+
+.comentarios>button , .comentario_data>button{
+  float: right;
+  font-size: 20px;
+  margin-right: 10px;
+  padding: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-width: 0px;
+  border-radius: 3px;
+  background-color: #330a0a;
+  color: #fff;
+}
+
+.comentarios>button:hover, .comentario_data>button:hover {
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: #140202;
+}
+
+hr{
+  border-top: 3px solid #330a0a ;
+  border-bottom: 0px;
+  margin-top: 40px ;
+  margin-bottom: 20px;
+}
+
+select{
+
+  float:right;
+  padding:3px;
+  margin: 0px;
+  border: 1px solid #330a0a;
+  color: #140202;
+}
+ label[for=filtro]{
+   float: right;
+   
+ }
+div.content_comentario{
+  display: grid;
+  grid-template-columns: 150px auto;
+  grid-template-rows: 150px auto;
+  
+  
+  font-size: 18px !important;
+  margin-bottom: 20px;
+}
+
+.image_profile {
+  padding:30px;
+
+}
+.image_profile>img{
+  width: 90px;
+  height: 90px;
+  
+}
+.comentario_data>p.user{
+  display: inline;
+  margin: 5px;
+}
+
+.comentario_data>p.like, .comentario_data>p.ocultar{
+  display: inline-block;
+  margin: 5px;
+}
+.comentario_data>p.like{
+  float: right;
+  }
+.comentario_text{
+  margin: 5px;
+}
+  div.content_subcomentario{
+    display: grid;
+    grid-template-columns: 150px auto;
+    grid-template-rows:  auto;
+   
+    font-size: 18px !important;
+    
+  }
+textarea.contestar{
+  width: 100%;
+  height: auto;
+  font-size: 100%;
+  color: #330a0a;
+}
+path[fill=none]:hover{
+  fill: #330a0a;
+}
+svg[name=marcador]:hover{
+  fill: #330a0a;
+}
