@@ -162,7 +162,12 @@ html {
       border: 2px solid  #330a0a;
       
   }
-  .registro>.registro-datos>form>input[type=submit]{
+
+  .registro>.registro-datos>form>a{
+    width: 100%;
+  }
+
+  .registro>.registro-datos>form>a>input[type=submit]{
     background-color: #330a0a;
     height: 50px;
     color: white;
