@@ -73,6 +73,46 @@ a {
   background-color: #140202;
 }
 
+
+.headerbox>.navopc>.dropdown{
+  display: inline-block;
+  width: 25%;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  position: relative;
+  display: inline-block;
+}
+
+.headerbox>.navopc>.dropdown>a{
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.headerbox>.navopc>.dropdown>.dropdown-contenido{
+  display: none;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.headerbox>.navopc>.dropdown>.dropdown-contenido>a{
+    color: black;
+    text-decoration: none;
+    display: block;
+}
+
+.headerbox>.navopc>.dropdown :hover{
+  background-color: #140202;
+}
+
+.dropdown:hover .dropdown-contenido {
+  display: block;
+}
+
 .headerbox > .logo > a >.imagen {
   width: 50%;
   height: 80%;
