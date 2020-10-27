@@ -12,6 +12,7 @@ html {
 body {
   font-family: Arial, Geneva, sans-serif;
   margin: 0;
+background-color: white;
 }
 a {
   color: white;
@@ -23,7 +24,6 @@ a {
   max-width: 1200px;
   margin: 0 auto;
   float: none;
-  background-color: #fff;
 }
 
 .row::after {
@@ -37,14 +37,14 @@ a {
 }
 
 .header {
-  background-color: #330a0a;
+  background-color:#6E1818;
   width: 100%;
   margin-top: 0;
   height: 125px;
 }
 
 .headerbox {
-  background-color: #330a0a;
+  background-color: #6E1818;
   width: 100%;
   margin-top: 0;
   height: 125px;
@@ -62,19 +62,21 @@ a {
   width: 50%;
 }
 
-.headerbox>.navopc>a{
+.headerbox > .navopc > a {
   height: 100%;
   align-items: center;
   justify-content: center;
   width: 25%;
+  font-family: interstate, sans-serif;
+  font-weight: 700;
+  font-style: normal;
 }
 
-.headerbox>.navopc>a:hover{
-  background-color: #140202;
+.headerbox > .navopc > a:hover {
+  background-color: #410f0f;
 }
 
-
-.headerbox>.navopc>.dropdown{
+.headerbox > .navopc > .dropdown {
   display: inline-block;
   width: 25%;
   align-items: center;
@@ -84,28 +86,31 @@ a {
   display: inline-block;
 }
 
-.headerbox>.navopc>.dropdown>a{
+.headerbox > .navopc > .dropdown > a {
   height: 100%;
   align-items: center;
   justify-content: center;
   width: 100%;
+  font-family: interstate, sans-serif;
+  font-weight: 700;
+  font-style: normal;
 }
 
-.headerbox>.navopc>.dropdown>.dropdown-contenido{
+.headerbox > .navopc > .dropdown > .dropdown-contenido {
   display: none;
   background-color: #f9f9f9;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
-.headerbox>.navopc>.dropdown>.dropdown-contenido>a{
-    color: black;
-    text-decoration: none;
-    display: block;
+.headerbox > .navopc > .dropdown > .dropdown-contenido > a {
+  color: black;
+  text-decoration: none;
+  display: block;
 }
 
-.headerbox>.navopc>.dropdown :hover{
+.headerbox > .navopc > .dropdown :hover {
   background-color: #140202;
 }
 
@@ -113,8 +118,8 @@ a {
   display: block;
 }
 
-.headerbox > .logo > a >.imagen {
-  width: 50%;
+.headerbox > .logo > a > .imagen {
+  width: 100%;
   height: 80%;
 }
 
@@ -130,7 +135,7 @@ a {
   justify-content: center;
   align-content: center;
   flex-flow: column;
-  background-color: rgb(51, 10, 10,0.6);
+  background-color: rgb(51, 10, 10, 0.6);
   height: 100px;
 }
 
@@ -148,7 +153,7 @@ a {
 }
 
 .footer {
-  background-color: #330a0a;
+  background-color: #6E1818;
   width: 100%;
   height: 300px;
 }
@@ -161,13 +166,13 @@ a {
   width: 30%;
   margin: 0 0;
   flex-flow: column;
-  background-color: #330a0a;
+  background-color: #6E1818;
 }
 
 .footer-box > .right {
   flex-flow: column;
   width: 70%;
-  background-color: #330a0a;
+  background-color: #6E1818;
 }
 
 .footer-box > .right > h3 > a {
@@ -214,7 +219,7 @@ a {
 
 .Deportes-Seccion > .left > .noticia-datos {
   flex-flow: column;
-  background-color: rgb(51, 10, 10,0.6);
+  background-color: rgb(51, 10, 10, 0.6);
   height: 15%;
   width: 100%;
 }
@@ -287,7 +292,7 @@ a {
 
 .Esports-Seccion > .right > .noticia-datos {
   flex-flow: column;
-  background-color: rgb(51, 10, 10,0.6);
+  background-color: rgb(51, 10, 10, 0.6);
   height: 15%;
   width: 100%;
 }

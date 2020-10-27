@@ -67,6 +67,9 @@ html {
     align-items: center;
     justify-content: center;
     width: 25%;
+    font-family: interstate, sans-serif;
+    font-weight: 700;
+    font-style: normal;
   }
   
   .headerbox > .navopc > a:hover {
@@ -113,7 +116,7 @@ html {
   }
   
   .headerbox > .logo > a > .imagen {
-    width: 50%;
+    width: 100%;
     height: 80%;
   }
   
