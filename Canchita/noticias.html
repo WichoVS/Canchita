@@ -5,11 +5,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="noticias.css" />
+
+  <script src="js/noticias.js" defer></script>
   <title>Canchita</title>
 </head>
 
 <body>
-  <div class="header">
+  <div class="header" style="position: relative; " id="header">
     <div class="wrapper">
       <div class="headerbox container row">
         <div class="logo container">
@@ -20,7 +22,7 @@
 
           <div>
             <a class="container sport_opc" href="Deportes.html">Deportes </a>
-            <div>
+            <div id="menu_divd" style="display: block;">
               <a class="sport_category" href="Deportes.html">Futbol </a>
               <a class="sport_category" href="Deportes.html">Futbol Americano </a>
               <a class="sport_category" href="Deportes.html">Baloncesto </a>
@@ -34,7 +36,7 @@
 
           <div>
             <a class="container sport_opc" href="Esports.html">Esports</a>
-            <div>
+            <div  id="menu_dive" style="display: block;">
               <a class="sport_category" href="Esports.html">Moba </a>
               <a class="sport_category" href="Esports.html">Shooter </a>
               <a class="sport_category" href="Esports.html">Estrategia </a>
@@ -42,9 +44,15 @@
             </div>
           </div>
 
-          <div class="search_div">
+          <div class="search_div" id="search_div" >
             <a class="container search_opc" style="cursor: pointer;">Buscar</a>
-            <input type="text" class="search_input" placeholder="Buscar...">
+            <div class="search_container_box" id="search_container_box" style="top:-200px;" >
+                <input type="text" class="search_input" placeholder="Buscar...">
+              </div>
+            <div class="search_container" id="search_container" style="display: none;">
+              
+            </div>
+
           </div>
           <div>
             <a class="container profile" href="/Canchita/InicioSesion.html">Perfil</a>
@@ -55,7 +63,7 @@
     </div>
   </div>
 
-  <div class="content">
+  <div class="content" style="position: relative; top:0px;" id="content">
     <div class="content_center">
       <div class="details">
         <p class="date">Fecha</p>
@@ -352,6 +360,7 @@
     </div>
   </div>
   </div>
+
 </body>
 
 </html>
