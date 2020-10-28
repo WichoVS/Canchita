@@ -82,12 +82,15 @@ a {
   background-image: url(image/search.png);
   background-repeat: no-repeat;
   background-position: 95% 50%;
-  transition: background-position 2s;
+  transition: background-position 1s;
   z-index: 5 !important;
 }
 
 .search_input::placeholder{
   color: #808080;
+}
+.search_input:focus{
+  background-position: -50px 50%;
 }
 
 .headerbox > .navopc > div{
