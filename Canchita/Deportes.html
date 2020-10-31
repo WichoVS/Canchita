@@ -1,40 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="Esports.css" />
-    <title>Esports</title>
-  </head>
-  <body>
-    <div class="header">
-      <div class="wrapper">
-        <div class="headerbox container row">
-          <div class="logo container">
-            <a class="container" href="/Canchita/index.html"
-              ><img
-                class="imagen"
-                src="http://placecorgi.com/800/300"
-                alt="DoggoImg"
-            /></a>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="Deportes.css" />
+  <script src="js/header.js" defer></script>
+  <title>Deportes</title>
+</head>
+
+<body>
+  <div class="header" style="position: relative;top : 0px; " id="header">
+    <div class="wrapper">
+      <div class="headerbox container row">
+        <div class="logo container">
+          <a class="container" href="/Canchita/index.html"><img class="imagen" src="http://placecorgi.com/800/300"
+              alt="DoggoImg" /></a>
+        </div>
+        <div class="navopc container">
+          <div>
+            <a class="container sport_opc" href="Deportes.html">Deportes </a>
+            <div id="menu_divd" style="display: block;">
+              <a class="sport_category" href="Deportes.html">Futbol </a>
+              <a class="sport_category" href="Deportes.html">Futbol Americano </a>
+              <a class="sport_category" href="Deportes.html">Baloncesto </a>
+              <a class="sport_category" href="Deportes.html">Motor </a>
+              <a class="sport_category" href="Deportes.html">Tenis </a>
+              <a class="sport_category" href="Deportes.html">Boxeo </a>
+            </div>
           </div>
-          <div class="navopc container">
-            <a class="container" href="Deportes.html">Deportes</a>
-            <a class="container" href="Esports.html">Esports</a>
-            <a class="container" href="">Buscar</a>
-            <div class="dropdown container">
-              <a class="container" href="/Canchita/InicioSesion.html">Perfil</a>
-              <div class="dropdown-contenido">
-                <a href="InicioSesion.html">Inicio de Sesión</a>
-                <a href="Registro.html">Registro</a>
-                <a href="">Perfil</a>
-              </div>
+          <div>
+            <a class="container sport_opc" href="Esports.html">Esports</a>
+            <div id="menu_dive" style="display: block;">
+              <a class="sport_category" href="Esports.html">Moba </a>
+              <a class="sport_category" href="Esports.html">Shooter </a>
+              <a class="sport_category" href="Esports.html">Estrategia </a>
+              <a class="sport_category" href="Esports.html">Cartas </a>
+            </div>
+          </div>
+          <div class="search_div" id="search_div">
+            <a class="container search_opc" style="cursor: pointer;">Buscar</a>
+            <div class="search_container_box" id="search_container_box" style="top:-200px;">
+              <input type="text" class="search_input" placeholder="Buscar...">
+            </div>
+            <ul class="searcher" style="display: none;">
+            </ul>
+            <div class="search_container" id="search_container" style="display: none;">
+            </div>
+          </div>
+          <div>
+            <a class="container sport_opc" href="InicioSesion.html">Perfil</a>
+            <div id="menu_divp" style="display: block;">
+              <a class="sport_category" href="InicioSesion.html">Inicio de Sesión</a>
+              <a class="sport_category" href="Registro.html">Registro</a>
+              <a class="sport_category" href="">Perfil</a>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="Articulos">
+  </div>
+    <div class="Articulos" style="position: relative; top:0px;" id="content">
       <div class="wrapper">
         <div class="imagen-categoria row container">
           <img src="http://placecorgi.com/900/200" alt="FotoEsports" />
@@ -177,7 +202,7 @@
       </div>
     </div>
 
-    <div class="footer">
+    <div class="footer" id="footer" style="margin-top: 0px;">
       <div class="wrapper">
         <div class="footer-box container row">
           <div class="left container">
@@ -194,8 +219,24 @@
           </div>
           <div class="right container">
             <h2>Categorías</h2>
-            <h3><a href=""> Deportes</a></h3>
-            <h3><a href=""> Esports</a></h3>
+            <div class="container">
+              <div>
+                <h3><a href=""> Deportes</a></h3>
+                <h4><a href=""> Futbol</a></h4>
+                <h4><a href=""> Futbol Americano</a></h4>
+                <h4><a href=""> Baloncesto</a></h4>
+                <h4><a href=""> Motor</a></h4>
+                <h4><a href=""> Tenis</a></h4>
+                <h4><a href=""> Boxeo</a></h4>
+              </div>
+              <div>
+                <h3><a href=""> Esports</a></h3>
+                <h4><a href=""> Moba</a></h4>
+                <h4><a href=""> Shooter</a></h4>
+                <h4><a href=""> Estretegia</a></h4>
+                <h4><a href=""> Cartas</a></h4>
+              </div>
+            </div>
           </div>
         </div>
       </div>
