@@ -1,6 +1,5 @@
 html {
   box-sizing: border-box;
- 
 }
 /* inherit border-box on all elements in the universe and before and after
      */
@@ -11,7 +10,7 @@ html {
 }
 
 body {
-  font-family: Arial, Geneva, sans-serif ;
+  font-family: "Barlow", sans-serif;
   margin: 0;
 }
 a {
@@ -25,7 +24,6 @@ a {
   margin: 0 auto;
   float: none;
   background-color: #fff;
- 
 }
 
 .row::after {
@@ -43,7 +41,7 @@ a {
   width: 100%;
   margin-top: 0;
   height: 125px;
-  z-index: 2 ;
+  z-index: 2;
 }
 
 .headerbox {
@@ -65,13 +63,13 @@ a {
   width: 50%;
 }
 
-.headerbox > .navopc > div> a{
+.headerbox > .navopc > div > a {
   height: 100%;
   align-items: center;
-  justify-content: center ;
+  justify-content: center;
 }
 
-.search_input{
+.search_input {
   height: 100% !important;
   width: 100% !important;
   align-items: center;
@@ -86,63 +84,65 @@ a {
   z-index: 5 !important;
 }
 
-.search_input::placeholder{
+.search_input::placeholder {
   color: #808080;
 }
-.search_input:focus{
+.search_input:focus {
   background-position: -50px 50%;
 }
 
-.headerbox > .navopc > div{
+.headerbox > .navopc > div {
   width: 25%;
   height: 100%;
 }
 
-.headerbox > .navopc > div > div{
-  position: relative ;
- width: 100%;
- height: auto;
- /*z-index: 1;*/
+.headerbox > .navopc > div > div {
+  position: relative;
+  width: 100%;
+  height: auto;
+  /*z-index: 1;*/
 }
 
-.sport_category{
-
+.sport_category {
   display: block;
   text-align: center;
   background-color: #fff;
-  color:#330a0a;
+  color: #330a0a;
   width: 100%;
-  height: 0px ;
+  height: 0px;
   font-size: 18px;
   padding: 0px;
   border-bottom: 0px solid #140202;
-  transition: opacity 0.7s,padding 0s, border 0s, background-color 0.7s,color 0.7s;
+  transition: opacity 0.7s, padding 0s, border 0s, background-color 0.7s,
+    color 0.7s;
   opacity: 0;
   overflow: hidden;
 }
 
-.sport_category:hover{
-  background-color:  #140202;
+.sport_category:hover {
+  background-color: #140202;
   color: #fff;
 }
 
-.sport_opc:hover ~ div>a ,  .navopc>div>div:hover > a{
-opacity: 1;
-height: auto;
-padding: 5px;
-border-bottom: 1px solid #140202;
-  }
+.sport_opc:hover ~ div > a,
+.navopc > div > div:hover > a {
+  opacity: 1;
+  height: auto;
+  padding: 5px;
+  border-bottom: 1px solid #140202;
+}
 
-.headerbox > .navopc > a:hover , .headerbox > .navopc > div:hover {
+.headerbox > .navopc > a:hover,
+.headerbox > .navopc > div:hover {
   background-color: #140202;
 }
 
 .headerbox > .logo > a > .imagen {
-  width: 50%;
-  height: 80%;
+  width: 100%;
+  height: 100%;
 }
- 
-.search_container{
+
+.search_container {
   position: fixed !important;
   top: 125px;
   left: 0px;
@@ -150,10 +150,9 @@ border-bottom: 1px solid #140202;
   width: 100% !important;
   height: 100% !important;
   /*z-index: 1*/ ;
-  
 }
 
-.search_container_box{
+.search_container_box {
   position: fixed !important;
   width: 100%;
   left: 0px;
@@ -168,7 +167,7 @@ border-bottom: 1px solid #140202;
   z-index: 2 !important;
 }
 
-:focus{
+:focus {
   outline: none;
 }
 
@@ -207,25 +206,19 @@ border-bottom: 1px solid #140202;
   background-color: #330a0a;
 }
 
-
-
-.footer-box > .right > .container > div> h3 > a {
+.footer-box > .right > .container > div > h3 > a {
   font-size: 18px;
 }
 
-h4>a{
+h4 > a {
   font-size: 14px;
   font-weight: lighter;
-
-
 }
-h4{
- 
+h4 {
   padding: 0%;
   padding-bottom: 10px;
   margin: 0%;
 }
-
 
 .footer-box > .right > h2 {
   font-size: 30px;
@@ -249,91 +242,107 @@ h4{
 
 /*CONTENT*/
 
+.registro {
+  width: 100%;
+  height: auto;
+  justify-content: space-between;
+}
 
-  .registro{
-      width: 100%;
-      height: 800px;
-      justify-content: space-between;
-  }
+.registro > .ilustracion-left {
+  width: 27%;
+  height: auto;
+}
 
-  .registro>.ilustracion-left{
-      width: 27%;
-      height: 100%;
-      background-color: violet;
-  }
+.registro > .ilustracion-left > img {
+  width: 100%;
+  height: auto;
+}
 
-  .registro>.ilustracion-right{
-      width: 27%;
-      height: 100%;
-      background-color: violet;
-  }
+.registro > .ilustracion-right {
+  width: 27%;
+  height: auto;
+}
 
-  .registro>.registro-datos{
-      width: 46%;
-      align-items: center;
-      flex-direction: column;
-    }
+.registro > .ilustracion-right > img {
+  width: 100%;
+  height: auto;
+}
+.registro > .registro-datos {
+  width: 46%;
+  align-items: center;
+  flex-direction: column;
+}
 
-    .registro>.registro-datos>form{
-        flex-direction: column;
-        align-items: center;
-        width: 65%;
-    }
-    .registro>.registro-datos>form>.registro-img-user{
-      width: 35%;
-      height: 100px;
-      justify-content: center;
-      margin-bottom: 30px;
-      border-radius: 100%;
-      border: 2px solid  #330a0a;
-      
-  }
+.registro-datos > h1 {
+  font-size: 300%;
+  margin-bottom: 10%;
+}
 
-  .registro>.registro-datos>form>a{
-    width: 100%;
-  }
+.registro > .registro-datos > form {
+  flex-direction: column;
+  align-items: center;
+  border-bottom: auto;
+  width: 65%;
+}
+.registro > .registro-datos > form > .registro-img-user {
+  width: 35%;
+  height: 15%;
+  justify-content: center;
+  margin-bottom: 10%;
+  border-radius: 100%;
+  border: 2px solid #330a0a;
+}
 
-  .registro>.registro-datos>form>a>input[type=submit]{
-    background-color: #330a0a;
-    height: 50px;
-    color: white;
-    font-size: 20px;
-    text-transform: uppercase;
-    border: none;
-    cursor: pointer;
-    border-radius: 40px;
-    width: 100%;
-  }
+.registro > .registro-datos > form > a {
+  width: 100%;
+}
 
-  .registro>.registro-datos>form>input[type=text]{
-    height: 30px;
-    border: none;
-    border-bottom: 2px solid #330a0a;
-    width: 100%;
-    margin-bottom: 30px;
-    transition-duration: 0.5s;
-  }
+.registro > .registro-datos > form > label {
+  font-size: x-large;
+  margin-bottom: 10%;
+}
 
-  .registro>.registro-datos>form>input[type=text]:focus{
-    outline-style: none;
-    border-bottom-color: red;
-  }
+.registro > .registro-datos > form > a > input[type="submit"] {
+  background-color: #330a0a;
+  height: 50px;
+  color: white;
+  font-size: 20px;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  border-radius: 40px;
+  width: 100%;
+  margin-bottom: 10%;
+}
 
-  .registro>.registro-datos>form>input[type=file]{
-    margin-bottom: 50px;
-  }
+.registro > .registro-datos > form > input[type="text"] {
+  height: 30px;
+  border: none;
+  border-bottom: 2px solid #330a0a;
+  width: 100%;
+  margin-bottom: 30px;
+  transition-duration: 0.5s;
+}
 
-  .registro>.registro-datos>form>input[type=password]{
-    height: 30px;
-    width: 100%;
-    border: none;
-    border-bottom: 2px solid #330a0a;
-    margin-bottom: 30px;
-    transition-duration: 0.5s;
-  }
+.registro > .registro-datos > form > input[type="text"]:focus {
+  outline-style: none;
+  border-bottom-color: red;
+}
 
-  .registro>.registro-datos>form>input[type=password]:focus{
-    outline-style: none;
-    border-bottom-color: red;
-  }
+.registro > .registro-datos > form > input[type="file"] {
+  margin-bottom: 50px;
+}
 
+.registro > .registro-datos > form > input[type="password"] {
+  height: 30px;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #330a0a;
+  margin-bottom: 30px;
+  transition-duration: 0.5s;
+}
+
+.registro > .registro-datos > form > input[type="password"]:focus {
+  outline-style: none;
+  border-bottom-color: red;
+}

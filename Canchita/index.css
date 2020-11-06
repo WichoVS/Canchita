@@ -11,7 +11,7 @@ html {
 }
 
 body {
-  font-family: Arial, Geneva, sans-serif ;
+  font-family: "Barlow", sans-serif;
   margin: 0;
 }
 a {
@@ -72,8 +72,8 @@ a {
 }
 
 .search_input{
-  height: 100% !important;
-  width: 100% !important;
+  height: 100%;
+  width: 100%;
   align-items: center;
   justify-content: center ;
   padding-left: 20px;
@@ -82,8 +82,7 @@ a {
   background-image: url(image/search.png);
   background-repeat: no-repeat;
   background-position: 95% 50%;
-  transition: background-position 1.5s;
-  z-index: 5 !important;
+  z-index: 5;
 }
 
 .search_input::placeholder{
@@ -138,7 +137,7 @@ border-bottom: 1px solid #140202;
 }
 
 .headerbox > .logo > a > .imagen {
-  width: 50%;
+  width: 100%;
   height: 80%;
 }
  
@@ -150,6 +149,7 @@ border-bottom: 1px solid #140202;
   width: 100% !important;
   height: 100% !important;
   /*z-index: 1*/ ;
+  
   
 }
 
