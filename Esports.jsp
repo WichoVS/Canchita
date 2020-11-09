@@ -14,7 +14,8 @@
             href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap"
             rel="stylesheet"
             />
-        <link rel="stylesheet" href="Esports.css" />
+        <link rel="stylesheet" href="css/Esports.css" />
+        <link rel="stylesheet" href="css/HyF.css" />
         <script src="js/header.js" defer></script>
         <title>Esports</title>
     </head>
@@ -48,7 +49,7 @@
                         <div>
                             <a class="container sport_opc" href="Esports.jsp">Esports</a>
                             <div id="menu_dive" style="display: block">
-                                <a class="sport_category" href="Esports.jsp">Moba </a>
+                                <a class="sport_category" href="Esports.jsp">MOBA </a>
                                 <a class="sport_category" href="Esports.jsp">Shooter </a>
                                 <a class="sport_category" href="Esports.jsp">Estrategia </a>
                                 <a class="sport_category" href="Esports.jsp">Cartas </a>
@@ -75,7 +76,11 @@
                                 ></div>
                         </div>
                         <div>
-                            <a class="container sport_opc" href="InicioSesion.jsp">Perfil</a>
+                            <a class="container sport_opc" href="InicioSesion.jsp">
+                                <div class ="img-user container">
+                                    <img src="assets/fakerUserImage.jpg" alt="ImgUsuario"/>
+                                </div>
+                            </a>
                             <div id="menu_divp" style="display: block">
                                 <a class="sport_category" href="InicioSesion.jsp"
                                    >Inicio de Sesión</a

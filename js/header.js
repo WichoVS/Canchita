@@ -9,40 +9,40 @@ var box_2 = document.getElementById("search_container_box");
 var footer = document.getElementById("footer");
 var menu_divep = document.getElementById("menu_divp");
 
-  box.addEventListener("click",hide_box);
-  active_box.addEventListener("click",show_box);
+box.addEventListener("click", hide_box);
+active_box.addEventListener("click", show_box);
 
 
 
 
-function show_box(){
+function show_box() {
 
-  box.style.display = "block";
-  header.style.position = "fixed";
-  content.style.top = "125px"
-  menu_divd.style.display = "none";
-  menu_dive.style.display = "none";
-  menu_divep.style.display = "none"
-  box_2.style.top = "125px";
-  footer.style.marginTop = "125px"
-  event.stopPropagation();
-  
+    box.style.display = "block";
+    header.style.position = "fixed";
+    content.style.top = "125px";
+    menu_divd.style.display = "none";
+    menu_dive.style.display = "none";
+    menu_divep.style.display = "none";
+    box_2.style.top = "90px";
+    footer.style.marginTop = "90px";
+    event.stopPropagation();
+
 }
 
 
- function hide_box(){
-  e = window.event || e; 
- if(this === e.target) {
-  box.style.display = "none";
-  header.style.position = "relative";
-  content.style.top = "0px"
-  menu_divd.style.display = "block";
-  menu_dive.style.display = "block";
-  menu_divep.style.display = "block";
-  box_2.style.top = "-200px";
-  footer.style.marginTop = "0px";
-  event.stopPropagation();
-   }
+function hide_box() {
+    e = window.event || e;
+    if (this === e.target) {
+        box.style.display = "none";
+        header.style.position = "relative";
+        content.style.top = "0px";
+        menu_divd.style.display = "block";
+        menu_dive.style.display = "block";
+        menu_divep.style.display = "block";
+        box_2.style.top = "-200px";
+        footer.style.marginTop = "0px";
+        event.stopPropagation();
+    }
 }
 
 

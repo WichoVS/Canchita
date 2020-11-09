@@ -14,7 +14,8 @@
             href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap"
             rel="stylesheet"
             />
-        <link rel="stylesheet" href="Deportes.css" />
+        <link rel="stylesheet" href="css/Deportes.css"/>
+        <link rel="stylesheet" href="css/HyF.css"/>
         <script src="js/header.js" defer></script>
         <title>Deportes</title>
     </head>
@@ -75,7 +76,11 @@
                                 ></div>
                         </div>
                         <div>
-                            <a class="container sport_opc" href="InicioSesion.jsp">Perfil</a>
+                            <a class="container sport_opc" href="InicioSesion.jsp">
+                                <div class ="img-user container">
+                                    <img src="assets/fakerUserImage.jpg" alt="ImgUsuario"/>
+                                </div>
+                            </a>
                             <div id="menu_divp" style="display: block">
                                 <a class="sport_category" href="InicioSesion.jsp"
                                    >Inicio de Sesión</a
@@ -91,7 +96,7 @@
         <div class="Articulos" style="position: relative; top: 0px" id="content">
             <div class="wrapper">
                 <div class="imagen-categoria row container">
-                    <img src="http://placecorgi.com/900/200" alt="FotoEsports" />
+                    <img src="assets/Deportes.jpg" alt="FotoDeportes" />
                 </div>
                 <div class="row">
                     <section class="Seccion-Titulo container">Sub-Categoría</section>

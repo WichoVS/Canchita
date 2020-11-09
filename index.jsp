@@ -14,7 +14,8 @@
             href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap"
             rel="stylesheet"
             />
-        <link rel="stylesheet" href="index.css" />
+        <link rel="stylesheet" href="css/index.css"/>
+        <link rel="stylesheet" href="css/HyF.css"/>
         <script src="js/header.js" defer></script>
         <title>Canchita</title>
     </head>
@@ -75,7 +76,11 @@
                                 ></div>
                         </div>
                         <div>
-                            <a class="container sport_opc" href="InicioSesion.jsp">Perfil</a>
+                            <a class="container sport_opc" href="InicioSesion.jsp">
+                                <div class ="img-user container">
+                                    <img src="assets/fakerUserImage.jpg" alt="ImgUsuario"/>
+                                </div>
+                            </a>
                             <div id="menu_divp" style="display: block">
                                 <a class="sport_category" href="InicioSesion.jsp"
                                    >Inicio de Sesión</a

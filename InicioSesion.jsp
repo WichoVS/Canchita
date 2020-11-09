@@ -14,7 +14,9 @@
             href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap"
             rel="stylesheet"
             />
-        <link rel="stylesheet" href="InicioSesion.css"/>
+        <link rel="stylesheet" href="https://use.typekit.net/gkx8ybj.css">
+        <link rel="stylesheet" href="css/InicioSesion.css"/>
+        <link rel="stylesheet" href="css/HyF.css"/>
         <script src="js/header.js" defer></script>
         <title>Inicio de Sesión</title>
     </head>
@@ -73,7 +75,11 @@
                                 ></div>
                         </div>
                         <div>
-                            <a class="container sport_opc" href="InicioSesion.jsp">Perfil</a>
+                            <a class="container sport_opc" href="InicioSesion.jsp">
+                                <div class ="img-user container">
+                                    <img src="assets/fakerUserImage.jpg" alt="ImgUsuario"/>
+                                </div>
+                            </a>
                             <div id="menu_divp" style="display: block">
                                 <a class="sport_category" href="InicioSesion.jsp"
                                    >Inicio de Sesión</a
@@ -95,7 +101,7 @@
                 <img src="assets/LoginMedium.png" alt="ImagenInicioSesión" />
             </div>
             <div class="datos container">
-                <h1 class="">Inicio de Sesión</h1>
+                <h1>INICIO DE SESIÓN</h1>
                 <form class="container" action="">
                     <label for="input-usuario">Nombre de Usuario: </label>
                     <input type="text" name="input-usuario" class="input-usuario" />

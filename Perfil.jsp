@@ -14,7 +14,8 @@
             href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap"
             rel="stylesheet"
             />
-        <link rel="stylesheet" href="Perfil.css" />
+        <link rel="stylesheet" href="css/Perfil.css"/>
+        <link rel="stylesheet" href="css/HyF.css"/>
         <script src="js/header.js" defer></script>
         <title>Perfil</title>
     </head>
@@ -61,7 +62,11 @@
                             </div>
                         </div>
                         <div>
-                            <a class="container sport_opc" href="InicioSesion.jsp">Perfil</a>
+                            <a class="container sport_opc" href="InicioSesion.jsp">
+                                <div class ="img-user container">
+                                    <img src="assets/fakerUserImage.jpg" alt="ImgUsuario"/>
+                                </div>
+                            </a>
                             <div id="menu_divp" style="display: block;">
                                 <a class="sport_category" href="InicioSesion.jsp">Inicio de Sesión</a>
                                 <a class="sport_category" href="Registro.jsp">Registro</a>
@@ -77,7 +82,7 @@
                 <div class="perfil-zone container">
                     <div class="perfil-opciones container">
                         <div class="img-perfil container row">
-                            <img src="http://placecorgi.com/256/256" alt="PerfilFoto" />
+                            <img src="assets/fakerUserImage.jpg" alt="PerfilFoto" />
                         </div>
                         <div class="perfil-datos container row">
                             <h2>Nombre de Usuario</h2>

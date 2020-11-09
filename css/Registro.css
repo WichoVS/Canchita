@@ -1,0 +1,111 @@
+.registro {
+    width: 100%;
+    height: auto;
+    justify-content: space-between;
+}
+
+.registro > .ilustracion-left {
+    width: 27%;
+    height: auto;
+}
+
+.registro > .ilustracion-left > img {
+    width: 100%;
+    height: auto;
+}
+
+.registro > .ilustracion-right {
+    width: 27%;
+    height: auto;
+}
+
+.registro > .ilustracion-right > img {
+    width: 100%;
+    height: auto;
+}
+.registro > .registro-datos {
+    width: 46%;
+    align-items: center;
+    flex-direction: column;
+}
+
+.registro-datos > h1 {
+    font-family: hwt-slab-columbian,serif;
+    font-size: 400%;
+    font-weight: normal;
+}
+
+.registro > .registro-datos > form {
+    flex-direction: column;
+    align-items: center;
+    width: 65%;
+}
+.registro > .registro-datos > form > .registro-img-user {
+    width: 35%;
+    height: 15%;
+    justify-content: center;
+    margin-bottom: 10%;
+    border-radius: 100%;
+    border: 2px solid #330a0a;
+}
+
+.registro > .registro-datos > form > a {
+    width: 100%;
+}
+
+.registro > .registro-datos > form > label {
+    font-size: x-large;
+    margin-bottom: 10%;
+}
+
+.registro > .registro-datos > form > input[type="submit"] {
+    background-color: #330a0a;
+    height: 50px;
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    border-radius: 40px;
+    width: 100%;
+    margin-bottom: 10%;
+}
+
+.registro > .registro-datos > form > input[type="submit"]:hover {
+    background-color: #701513;
+    transition-duration: 0.2s;
+}
+
+.registro > .registro-datos > form > input[type="text"] {
+    height: 30px;
+    border: none;
+    border-bottom: 2px solid #330a0a;
+    width: 100%;
+    margin-bottom: 30px;
+    background-color: transparent;
+}
+
+.registro > .registro-datos > form > input[type="text"]:focus {
+    outline-style: none;
+    border-bottom-color: red;
+    transition-duration: 0.5s;
+}
+
+.registro > .registro-datos > form > input[type="file"] {
+    margin-bottom: 50px;
+}
+
+.registro > .registro-datos > form > input[type="password"] {
+    height: 30px;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #330a0a;
+    margin-bottom: 30px;
+    background-color: transparent;
+}
+
+.registro > .registro-datos > form > input[type="password"]:focus {
+    outline-style: none;
+    border-bottom-color: red;
+    transition-duration: 0.5s;
+}
