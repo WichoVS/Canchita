@@ -10,9 +10,16 @@
 
 .imagen-categoria {
     width: 100%;
+    height: auto;
     justify-content: center;
     margin-top: 50px;
     margin-bottom: 100px;
+}
+
+.imagen-categoria > img{
+    width: 80%;
+    height: auto;
+    display: block;
 }
 
 .galeria-noticias {

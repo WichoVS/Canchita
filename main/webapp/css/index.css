@@ -43,7 +43,7 @@
 .Deportes-Seccion > .left {
   width: 49%;
   height: 400px;
-  background: url(http://placecorgi.com/800/400);
+  background: url(../assets/NoticiaDWM.jpg);
   justify-content: flex-end;
   flex-flow: column;
 }
