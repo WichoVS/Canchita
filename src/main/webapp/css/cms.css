@@ -1,0 +1,108 @@
+hr{
+    border-top: 5px solid #330a0a;
+
+}
+.content{
+    width: 100%;
+    height: auto;
+  
+
+}
+.content>div{
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+  .content>div>p{
+      font-size: 200%;
+      
+  }
+
+  .content_grid{
+      display: grid;
+      grid-template-columns: 50% 50%;
+      grid-template-rows: auto ;
+     padding-bottom: 20px;
+     padding-top: 20px;
+  }
+  .data_form{
+     padding-top: 20px;
+padding-bottom: 40px;
+font-size: 24px;
+color: #330a0a;
+  }
+  .data_resource{
+ 
+      padding-top: 0px;
+      padding-bottom: 40px;
+  }
+  input[type=text]{
+      width: 90%;
+      height: 30px;
+      margin-bottom: 30px;
+      border: 2px solid #330a0a;
+  }
+  textarea{
+      width: 90%;
+      height: auto;
+      margin-bottom: 30px;
+      border: 2px solid #330a0a;
+      resize: none;
+  }
+select{
+    color: #330a0a;
+    padding:5px;
+    border: 2px solid #330a0a;
+}
+  .rsc_image{
+      display: grid;
+      padding-top: 0%;
+      margin-top: 0%;
+      grid-template-columns: 250px 250px;
+      grid-template-rows: 250px 250px;
+ 
+   padding-bottom: 30px;
+  }
+  .rsc_video{
+    display: grid;
+      
+    grid-template-columns: 250px 250px;
+    grid-template-rows: 250px 250px;
+    
+      padding-bottom: 30px;
+  }
+
+  .rsc_image>div, .rsc_video>div{
+     
+      
+      margin: 20px;
+  }
+
+  button{
+    
+    font-size: 20px;
+    margin-right: 10px;
+    padding: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-width: 0px;
+    border-radius: 3px;
+    background-color: #330a0a;
+    color: #fff;
+  }
+
+  button:hover{
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: #140202;
+  }
+  .image{
+      width: 150px;
+      height: 150px;
+      margin: 10%;
+      background-color: #330a0a;
+  }
+  .data_resource>p{
+      font-size: 24px;
+      color: #330a0a;
+  }
