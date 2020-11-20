@@ -1,2 +1,16 @@
-Models\Noticia.class
+StatementsQueries\SQ_Registro.class
+Controllers\FileUtils.class
+Models\Imagenes.class
+Models\Subcomentarios.class
+Models\Redsocial.class
 Controllers\MainServlet.class
+DbConnection\DbConnection.class
+Models\Comentarios.class
+Controllers\Registro.class
+Models\Marcadores.class
+Models\Usuario.class
+Models\Valoracion.class
+Models\Ban.class
+Models\Categoria.class
+Models\Noticia.class
+Models\Videos.class

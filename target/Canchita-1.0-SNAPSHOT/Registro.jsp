@@ -5,6 +5,11 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+
+<% String registro = (String)request.getAttribute("registro"); 
+if(registro == null)
+registro="";
+%>
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -18,6 +23,7 @@
         <link rel="stylesheet" href="css/Registro.css"/>
         <link rel="stylesheet" href="css/HyF.css"/>
         <script src="js/header.js" defer></script>
+       
         <title>Registro</title>
     </head>
 
@@ -92,22 +98,22 @@
                 </div>
             </div>
         </div>
-        <div class="registro container row">
+        <div class="registro container row" id ="content" >
             <div class="ilustracion-left container">
                 <img src="assets/nuguriRegistro.jpg" alt="ImgLeft" />
             </div>
             <div class="registro-datos container">
                 <h1>REGISTRO</h1>
-                <form class="container" action="">
+                <form class="container" action="Registro" method="POST" enctype="multipart/form-data">
                     <label for="input-correo-r">Correo Electrónico: </label>
-                    <input type="text" name="input-correo-r" class="input-correo-r" />
+                    <input type="text" name="input-correo-r" class="input-correo-r" requiered/>
                     <label for="input-usuario">Nombre de Usuario: </label>
-                    <input type="text" name="input-usuario-r" class="input-usuario-r" />
+                    <input type="text" name="input-usuario-r" class="input-usuario-r" requiered />
                     <label for="input-password-r">Contraseña: </label>
                     <input
                         type="password"
                         name="input-password-r"
-                        id="input-password-r"
+                        id="input-password-r" requiered
                         />
                     <label for="rs-twitter">Twitter: </label>
                     <input type="text" name="rs-twitter" class="rs-twitter" />
@@ -118,10 +124,11 @@
                         src="assets/fakerUserImage.jpg"
                         alt="userImagen"
                         />
-                    <input type="file" accept="image/png, image/jpeg, image/jpg"/>
+                    <input type="file"  name="image" id="image" accept="image/png, image/jpeg, image/jpg"/>
                     <input type="submit" 
                            value="Registrarse"/>
                 </form>
+                <h2> <%= registro  %></h2>
                 <br />
                 <br />
             </div>

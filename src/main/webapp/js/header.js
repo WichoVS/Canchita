@@ -19,7 +19,7 @@ function show_box() {
 
     box.style.display = "block";
     header.style.position = "fixed";
-    content.style.top = "125px";
+    content.style.top = "90px";
     menu_divd.style.display = "none";
     menu_dive.style.display = "none";
     menu_divep.style.display = "none";
