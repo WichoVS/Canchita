@@ -87,18 +87,23 @@ public class Registro extends HttpServlet {
         file.write(fullPath);
            
            
-           Usuario user = new Usuario(correo,name,contra,path);
+           Usuario user = new Usuario(correo,name,contra,FileUtils.RUTE_USER_IMAGE + "/" + nameImage);
            Redsocial red1 = new Redsocial(face);
            Redsocial red2 = new Redsocial(twit);
            
          int caso = SQ_Registro.insertUser(user,red1,red2);
+         
+         PrintWriter out = response.getWriter();
+         response.setContentType("text/html;charset=UTF-8");
          if( caso == 0){
-        request.setAttribute("registro", "Problema al registrar");
-        request.getRequestDispatcher("Registro.jsp").forward(request, response);
+             out.print("Problema al registrar");
+       // request.setAttribute("registro", "Problema al registrar");
+       // request.getRequestDispatcher("Registro.jsp").forward(request, response);
          }
          else{
-         request.setAttribute("registro", "Registro exitioso");
-        request.getRequestDispatcher("Registro.jsp").forward(request, response); 
+             out.print("Registro Exitoso");
+        // request.setAttribute("registro", "Registro exitioso");
+       // request.getRequestDispatcher("Registro.jsp").forward(request, response); 
          }
     }
 

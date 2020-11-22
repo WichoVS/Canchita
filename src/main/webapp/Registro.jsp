@@ -6,10 +6,7 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
-<% String registro = (String)request.getAttribute("registro"); 
-if(registro == null)
-registro="";
-%>
+
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -22,7 +19,9 @@ registro="";
         <link rel="stylesheet" href="https://use.typekit.net/gkx8ybj.css">
         <link rel="stylesheet" href="css/Registro.css"/>
         <link rel="stylesheet" href="css/HyF.css"/>
+        <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
         <script src="js/header.js" defer></script>
+        <script src="js/registrocheck.js" defer></script>
        
         <title>Registro</title>
     </head>
@@ -104,16 +103,16 @@ registro="";
             </div>
             <div class="registro-datos container">
                 <h1>REGISTRO</h1>
-                <form class="container" action="Registro" method="POST" enctype="multipart/form-data">
+                <form class="container" id="formulario" >
                     <label for="input-correo-r">Correo Electrónico: </label>
-                    <input type="text" name="input-correo-r" class="input-correo-r" requiered/>
+                    <input type="text" name="input-correo-r" class="input-correo-r" required/>
                     <label for="input-usuario">Nombre de Usuario: </label>
-                    <input type="text" name="input-usuario-r" class="input-usuario-r" requiered />
+                    <input type="text" name="input-usuario-r" class="input-usuario-r" required />
                     <label for="input-password-r">Contraseña: </label>
                     <input
                         type="password"
                         name="input-password-r"
-                        id="input-password-r" requiered
+                        id="input-password-r" required
                         />
                     <label for="rs-twitter">Twitter: </label>
                     <input type="text" name="rs-twitter" class="rs-twitter" />
@@ -125,10 +124,11 @@ registro="";
                         alt="userImagen"
                         />
                     <input type="file"  name="image" id="image" accept="image/png, image/jpeg, image/jpg"/>
-                    <input type="submit" 
+                    <input type="submit" id="btn_reg"
                            value="Registrarse"/>
                 </form>
-                <h2> <%= registro  %></h2>
+                <div id="ajaxresponse"> texto </div>
+              
                 <br />
                 <br />
             </div>
