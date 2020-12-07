@@ -80,7 +80,7 @@
                                 ></div>
                         </div>
                         <div>
-                            <a class="container sport_opc" href="InicioSesion.jsp">
+                            <a class="container sport_opc" href="">
                                 <div class ="img-user container">
                                     <img src="assets/fakerUserImage.jpg" alt="ImgUsuario"/>
                                 </div>
@@ -90,7 +90,6 @@
                                    >Inicio de Sesión</a
                                 >
                                 <a class="sport_category" href="Registro.jsp">Registro</a>
-                                <a class="sport_category" href="Perfil.jsp">Perfil</a>
                             </div>
                         </div>
                     </div>
@@ -105,7 +104,7 @@
                 <h1>REGISTRO</h1>
                 <form class="container" id="formulario" >
                     <label for="input-correo-r">Correo Electrónico: </label>
-                    <input type="text" name="input-correo-r" class="input-correo-r" required/>
+                    <input type="email" name="input-correo-r" class="input-correo-r" required/>
                     <label for="input-usuario">Nombre de Usuario: </label>
                     <input type="text" name="input-usuario-r" class="input-usuario-r" required />
                     <label for="input-password-r">Contraseña: </label>
@@ -123,12 +122,13 @@
                         src="assets/fakerUserImage.jpg"
                         alt="userImagen"
                         />
-                    <input type="file"  name="image" id="image" accept="image/png, image/jpeg, image/jpg"/>
+                    <input type="file"  name="image" id="image" accept="image/png, image/jpeg, image/jpg" required/>
                     <input type="submit" id="btn_reg"
                            value="Registrarse"/>
                 </form>
-                <div id="ajaxresponse"> texto </div>
-              
+                <div id="ajaxresponse">  </div>
+                <br/>
+                <div id="redirect" style="display:none"> <a class ="redirect"href="InicioSesion.jsp"> Iniciar sesión </a> </div>
                 <br />
                 <br />
             </div>

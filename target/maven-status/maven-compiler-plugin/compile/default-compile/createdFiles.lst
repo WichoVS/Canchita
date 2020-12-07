@@ -1,7 +1,9 @@
 StatementsQueries\SQ_Registro.class
 Controllers\FileUtils.class
 Models\Imagenes.class
+Controllers\login.class
 Models\Subcomentarios.class
+Controllers\Logout.class
 Models\Redsocial.class
 Controllers\MainServlet.class
 DbConnection\DbConnection.class

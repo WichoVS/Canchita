@@ -25,11 +25,11 @@ public class DbConnection {
         // el nombre de la base de datos que es pwDB
         // lo demas son parametros para que no tengan problemas con zonas horarias
         // pwDB?useUnicode=true&useJDBCCompliantTimeZoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
-        dataSource.setUrl("jdbc:mysql://localhost:3306/canchitadb?useUnicode=true&useJDBCCompliantTimeZoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC");
+        dataSource.setUrl("jdbc:mysql://databasepw.cqlg5afhee1c.us-east-1.rds.amazonaws.com:3306/canchitaDB?useUnicode=true&useJDBCCompliantTimeZoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC");
         // El nombre de usuario de su conexion
-        dataSource.setUsername("root");
+        dataSource.setUsername("admin");
         // La contraseña del usuario de su conexion
-        dataSource.setPassword("root");
+        dataSource.setPassword("12345678");
         // dataSource.setMaxIdle(0);
         // dataSource.setMaxActive(100);
     }

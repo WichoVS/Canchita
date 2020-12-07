@@ -76,7 +76,7 @@
     transition-duration: 0.2s;
 }
 
-.registro > .registro-datos > form > input[type="text"] {
+.registro > .registro-datos > form > input[type="text"],input[type="email"] {
     height: 30px;
     border: none;
     border-bottom: 2px solid #330a0a;
@@ -85,7 +85,7 @@
     background-color: transparent;
 }
 
-.registro > .registro-datos > form > input[type="text"]:focus {
+.registro > .registro-datos > form > input[type="text"]:focus,input[type="email"]:focus {
     outline-style: none;
     border-bottom-color: red;
     transition-duration: 0.5s;
@@ -108,4 +108,21 @@
     outline-style: none;
     border-bottom-color: red;
     transition-duration: 0.5s;
+}
+
+
+.correct_response{
+    color:green;
+    font-size: 28px;
+     font-family: "Barlow", sans-serif;
+}
+.fail_response{
+    color:red;
+    font-size: 28px;
+     font-family: "Barlow", sans-serif;
+}
+
+.redirect{
+    color:blue;
+    text-decoration: underline;
 }

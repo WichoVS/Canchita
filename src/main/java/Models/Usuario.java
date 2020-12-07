@@ -10,6 +10,9 @@ package Models;
  * @author angel
  */
 public class Usuario {
+
+   
+    private int id ;
     private String correo ;
     private String nickname;
     private String avatar; // path de la imagen
@@ -29,6 +32,25 @@ public class Usuario {
         this.avatar = avatar;
         this.contra = contra;
         
+    }
+
+    public int getId() {
+        return id;
+    }
+    
+   public Usuario(int id, String correo, String nickname, String avatar, String nombre, String apellido, String nacimiento, boolean admin, boolean anonimo, boolean moderador, boolean creador, boolean editor) {
+        this.id = id;
+        this.correo = correo;
+        this.nickname = nickname;
+        this.avatar = avatar;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.nacimiento = nacimiento;
+        this.admin = admin;
+        this.anonimo = anonimo;
+        this.moderador = moderador;
+        this.creador = creador;
+        this.editor = editor;
     }
 
     public String getCorreo() {

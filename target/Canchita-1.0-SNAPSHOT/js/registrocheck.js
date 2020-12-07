@@ -15,8 +15,17 @@ $.ajax({
     processData: false,
     contentType: false,
     success: function(response){
-        $('#formulario').hide();
+        
+        if(response === "Problema al registrar"){
+             $('#ajaxresponse').addClass("fail_response");
         $('#ajaxresponse').html(response);
+    }else{
+        
+        $('#formulario').hide();
+        $('#ajaxresponse').addClass("correct_response");
+        $('#ajaxresponse').html(response);
+        $('#redirect').show();
+    }
     }
         });
     
