@@ -82,7 +82,7 @@
                         <div>
                             <a class="container sport_opc" href="">
                                 <div class ="img-user container">
-                                    <img src="assets/fakerUserImage.jpg" alt="ImgUsuario"/>
+                                    <img src="assets/anonimo.jpg" alt="ImgUsuario"/>
                                 </div>
                             </a>
                             <div id="menu_divp" style="display: block">

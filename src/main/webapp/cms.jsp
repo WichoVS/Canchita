@@ -5,6 +5,10 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<% String resultado = (String)request.getAttribute("resultado");
+if(resultado == null)
+resultado = "";
+%>
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -30,17 +34,27 @@
             </div>
 
             <hr />
+            <form method="POST" action="cms" enctype="multipart/form-data">
             <div class="content_grid">
                 <div class="data_form">
-                    <label for="">Titulo de notica:</label><br />
-                    <input type="text" class="text" /><br />
-                    <label for="">Descripcion Corta:</label><br />
-                    <input type="text" class="text" /><br />
-                    <label for="">Noticia:</label><br />
-                    <textarea name="" id="" cols="30" rows="10"></textarea><br />
-                    <label for="">Categoria(s):</label><br />
-                    <select name="" id="">
-                        <option value="">Seleccionar categoria</option>
+                    <label for="n_titulo">Titulo de notica:</label><br />
+                    <input type="text" class="text" name="n_titulo" required/><br />
+                    <label for="n_descripcion">Descripcion Corta:</label><br />
+                    <input type="text" class="text" name="n_descripcion" required/><br />
+                    <label for="n_noticia">Noticia:</label><br />
+                    <textarea   cols="30" rows="10" name="n_noticia" required></textarea><br />
+                    <label for="n_categoria">Categoria(s):</label><br />
+                    <select name="n_categoria" >
+                        <option>Futbol</option>
+                        <option >Futbol Americano</option>
+                        <option >Baloncesto</option>
+                        <option >Motor</option>
+                        <option >Tenis</option>
+                        <option >Boxeo</option>
+                        <option >Moba</option>
+                        <option >Shooter</option>
+                        <option>Estrategia</option>
+                        <option >Cartas</option>
                     </select>
                 </div>
                 <div class="data_resource">
@@ -48,43 +62,46 @@
                     <div class="rsc_image">
                         <div>
                             <div class="image"></div>
-                            <center><button>Seleccionar...</button></center>
+                            <center> <input type="file"  name="image1"  accept="image/png, image/jpeg, image/jpg" /></center>
                         </div>
                         <div>
                             <div class="image"></div>
-                            <center><button>Seleccionar...</button></center>
+                            <center><input type="file"  name="image2"  accept="image/png, image/jpeg, image/jpg" /></center>
                         </div>
                         <div>
                             <div class="image"></div>
-                            <center><button>Seleccionar...</button></center>
+                            <center><input type="file"  name="image3"  accept="image/png, image/jpeg, image/jpg" /></center>
                         </div>
                         <div>
                             <div class="image"></div>
-                            <center><button>Seleccionar...</button></center>
+                            <center><input type="file"  name="image4"  accept="image/png, image/jpeg, image/jpg" /></center>
                         </div>
                     </div>
                     <p>Videos</p>
                     <div class="rsc_video">
                         <div>
                             <div class="image"></div>
-                            <center><button>Seleccionar...</button></center>
+                            <center><input type="file"  name="video1"  accept="video/mp4" /></center>
                         </div>
                         <div>
                             <div class="image"></div>
-                            <center><button>Seleccionar...</button></center>
+                            <center><input type="file"  name="video2"  accept="video/mp4" /></center>
                         </div>
                         <div>
                             <div class="image"></div>
-                            <center><button>Seleccionar...</button></center>
+                            <center><input type="file"  name="video3"  accept="video/mp4" /></center>
                         </div>
                         <div>
                             <div class="image"></div>
-                            <center><button>Seleccionar...</button></center>
+                            <center><input type="file"  name="video4"  accept="video/mp4" /></center>
                         </div>
                     </div>
                 </div>
             </div>
-            <center><button>Enviar y Aprobar</button></center>
+            <center> <input type="submit" id="btn_reg" class="botoncms"
+                           value="Enviar a aprobación"/></center>
+            </form>
+            <center> <p class="resultado"> <%= resultado%></p></center>
             <br />
             <br />
             <br />

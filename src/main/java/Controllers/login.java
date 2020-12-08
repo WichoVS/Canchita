@@ -63,7 +63,7 @@ public class login extends HttpServlet {
         } else {
             HttpSession session = request.getSession();
             session.setAttribute("Usuario",user);
-            session.setAttribute("ruta",user.getAvatar());
+            //session.setAttribute("ruta",user.getAvatar());
           //  response.sendRedirect("index.jsp");
         }
          

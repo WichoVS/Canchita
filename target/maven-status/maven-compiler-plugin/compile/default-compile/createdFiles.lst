@@ -1,3 +1,4 @@
+Models\mediacms.class
 StatementsQueries\SQ_Registro.class
 Controllers\FileUtils.class
 Models\Imagenes.class
@@ -6,6 +7,7 @@ Models\Subcomentarios.class
 Controllers\Logout.class
 Models\Redsocial.class
 Controllers\MainServlet.class
+Controllers\cms.class
 DbConnection\DbConnection.class
 Models\Comentarios.class
 Controllers\Registro.class
@@ -14,5 +16,6 @@ Models\Usuario.class
 Models\Valoracion.class
 Models\Ban.class
 Models\Categoria.class
+StatementsQueries\Insertcms.class
 Models\Noticia.class
 Models\Videos.class

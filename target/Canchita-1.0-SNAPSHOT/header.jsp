@@ -5,15 +5,32 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="Models.Usuario"%>
 <% 
- 
-String foto = (String)session.getAttribute("ruta");
+ Usuario user = (Usuario)session.getAttribute("Usuario");
+String foto = "";
+String nombre = "";
 String display = "block";
 String display2 = "none";
-if(foto == null){
- foto = "assets/fakerUserImage.jpg";
+String display_cr = "none";
+String display_ed = "none";
+if(user == null){
+ foto = "assets/anonimo.png";
  display = "none";
  display2 = "block";
+    }
+    else if(user.isCreador()){
+    display_cr = "block";
+    }
+    else if(user.isEditor()){
+    display_ed = "block";
+    display_cr = "block";
+    }
+    
+    
+   if(user != null ){
+    foto = user.getAvatar();
+    nombre = user.getNickname();
     }
 %>
 
@@ -83,8 +100,10 @@ if(foto == null){
                             <div id="menu_divp" style="display: block">
                                 <a class="sport_category" href="InicioSesion.jsp" style="display:<%= display2 %>">Inicio de Sesión</a>
                                 <a class="sport_category" href="Registro.jsp" style="display:<%= display2 %>">Registro</a>
-                                <a class="sport_category" href="Perfil.jsp" style="display:<%= display %>">Perfil</a>
+                                <a class="sport_category" href="Perfil.jsp" style="display:<%= display %>"><%= nombre%></a>
                                 <a class="sport_category" href="Logout" style="display:<%= display %>">Cerrar Sesión</a>
+                                <a class="sport_category" href="cms.jsp" style="display:<%= display_cr %>">CMS</a>
+                                <a class="sport_category" href="newscheck.jsp" style="display:<%= display_ed %>">Validar CMS</a>
                             </div>
                         </div>
                     </div>

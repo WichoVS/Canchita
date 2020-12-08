@@ -27,6 +27,7 @@ $.ajax({
           
     }else{
         document.formulario.action = "index.jsp";
+        document.formulario.method = "POST";
                 document.formulario.submit();
     }
     }

@@ -11,7 +11,8 @@ package Controllers;
  */
 public class FileUtils {
     public static String RUTE_USER_IMAGE = "assets/images";
-    
+     public static String RUTE_USER_VIDEO = "assets/videos";
+     
     public static String GetExtension(String contentType) {
         switch (contentType) {
             case "image/png":
