@@ -25,6 +25,14 @@ public class Usuario {
     private boolean moderador;
     private boolean creador;
     private boolean editor;
+
+    public Usuario(String nickname, String avatar, String nombre, String apellido, boolean creador) {
+        this.nickname = nickname;
+        this.avatar = avatar;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.creador = creador;
+    }
     
     public Usuario(String correo,String nickname,String contra, String avatar){
         this.correo = correo;

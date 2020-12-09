@@ -11,6 +11,21 @@ package Models;
  */
 public class Noticia {
 
+    public Noticia(int id, String titulo, String categoria, String descripcion, String text, int iduser, String fecha, String imagen) {
+        this.id = id;
+        this.titulo = titulo;
+        this.categoria = categoria;
+        this.descripcion = descripcion;
+        this.text = text;
+        this.iduser = iduser;
+        this.fecha = fecha;
+        this.imagen = imagen;
+    }
+
+    public String getImagen() {
+        return imagen;
+    }
+
     public Noticia( String titulo,String categoria ,String descripcion, int iduser,String texto) {
         this.text = texto;
         this.titulo = titulo;
@@ -26,13 +41,15 @@ public class Noticia {
     private String categoria;
     private String descripcion;
     private String text;
+     private boolean check;
+    private int iduser;
+    private String fecha;
+    private String imagen;
 
     public String getText() {
         return text;
     }
-    private boolean check;
-    private int iduser;
-    private String fecha;
+   
 
     public int getId() {
         return id;

@@ -10,6 +10,10 @@ package Models;
  * @author angel
  */
 public class Imagenes {
+
+    public Imagenes(String ruta) {
+        this.ruta = ruta;
+    }
     
     private int id;
     private int idnoticia;

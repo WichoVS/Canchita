@@ -5,6 +5,12 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ page import="Models.Noticia"%>
+<%@ page import="java.util.List"%>
+
+<%
+    List<Noticia> news = (List<Noticia>)request.getAttribute("noticias");
+%>
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -17,17 +23,40 @@
         <link rel="stylesheet" href="css/newscheck.css" />
         <link rel="stylesheet" href="css/HyF.css"/>
         <script src="js/header.js" defer></script>
-        <title>CMS</title>
+        <title>Validar noticias</title>
     </head>
 
     <body>
            <%-- JSP para el header --%>
        <jsp:include page="header.jsp"/>
        
-        <div class="content" style="position: relative; top:0px;" id="content">
-            
-       
-       
+         <div class="Articulos" style="position: relative; top: 0px" id="content">
+            <div class="wrapper">
+              
+                <div class="row">
+                    <section class="Seccion-Titulo container">Noticias por validar:</section>
+                </div>
+                <div class="galeria-noticias container row">
+                    
+                    <% for(Noticia element: news){%>
+                    <div class="noticia-box container">
+                        <a href="NotciasCms?idnoticia=<%= element.getId()%>">
+                            <div class="img-box container">
+                                <img src="<%= element.getImagen() %>" alt="FotodePerro" />
+                            </div>
+                            <h2> <%= element.getTitulo() %></h2>
+                            <p>
+                                <%= element.getDescripcion() %>
+                            </p>
+                        </a>
+                    </div>
+                    
+                    
+                    <% }
+                    %>
+                </div>
+            </div>
+        </div>
         <%-- JSP para el footer --%>
          <jsp:include page="footer.jsp"/>
     </body>

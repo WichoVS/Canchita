@@ -7,10 +7,58 @@ and open the template in the editor.
     Created on : 8 dic. 2020, 3:29:56
     Author     : angel
 */
-.content{
+.Seccion-Titulo {
+    height: 70%;
+    font-size: 28px;
+    border-bottom: gray solid 1px;
+}
+
+.Articulos {
+    width: 100%;
+}
+
+.imagen-categoria {
     width: 100%;
     height: auto;
-  padding-top:100px;
-  padding-bottom: 100px;
-
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 100px;
 }
+
+.imagen-categoria > img{
+    width: 80%;
+    height: auto;
+    display: block;
+}
+
+.galeria-noticias {
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.galeria-noticias > .noticia-box {
+    width: 48%;
+    flex-direction: column;
+    padding: 18px;
+    box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    margin: 50px 0;
+}
+
+.galeria-noticias > .noticia-box> a > .img-box {
+    justify-content: center;
+}
+
+.galeria-noticias > .noticia-box > a > h2 {
+    color: rgb(27, 27, 27);
+    text-align: center;
+    font-size: x-large;
+}
+
+.galeria-noticias > .noticia-box > a > p {
+    color: rgb(27, 27, 27);
+    text-align: center;
+    margin-top: 0;
+    font-size: medium;
+}
+

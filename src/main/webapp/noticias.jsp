@@ -5,6 +5,19 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="Models.Imagenes"%>
+<%@page import="Models.Videos" %>
+<%@page import="Models.Noticia"%>
+<%@page import="Models.Usuario"%>
+<%@page import="java.util.List"%>
+
+<%
+List<Imagenes> imagenes = (List<Imagenes>)request.getAttribute("imagenes");
+List<Videos> videos = (List<Videos>)request.getAttribute("videos");
+Noticia noticia = (Noticia)request.getAttribute("noticias");
+Usuario usernews = (Usuario)request.getAttribute("usernews");
+String validado = (String)request.getAttribute("validado");
+%>
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -27,13 +40,13 @@
             <div class="content_center">
                 <div class="image_main">
                     <div>
-                        <p>Categoria</p>
+                        <p><%= noticia.getCategoria() %></p>
                     </div>
-                    <img src="http://placecorgi.com/800/300" alt="Imagen principal" />
+                    <img src="<%= noticia.getImagen() %>" alt="Imagen principal" />
                 </div>
                 <div class="content_news">
                     <div class="news_info">
-                        <p class="title_news">Titulo de Noticia</p>
+                        <p class="title_news"><%= noticia.getTitulo() %></p>
 
                         <svg
                             height="28"
@@ -54,111 +67,33 @@
                         </svg>
                         <p class="rating">5.0</p>
                         <p class="datanews">
-                            Monterrey,NL. - 5:35 p.m. Escrito por nombre de usuario
+                            Monterrey,NL. - 5:35 p.m. Escrito por <%= usernews.getNickname() %>
                         </p>
                         <div class="content">
                             <p class="textos">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-                                finibus massa sed eros pretium malesuada. Maecenas urna augue,
-                                suscipit et orci a, volutpat mattis nulla. Vestibulum ut
-                                pharetra arcu. Curabitur eu tortor sed augue porta placerat.
-                                Pellentesque facilisis odio sit amet dolor molestie, in commodo
-                                metus interdum. Cras lobortis, purus sit amet convallis
-                                fermentum, erat neque malesuada justo, sit amet aliquet augue
-                                diam ornare mauris. Donec fringilla scelerisque arcu in
-                                volutpat. Mauris risus metus, placerat blandit congue hendrerit,
-                                accumsan nec quam. Nulla commodo ipsum velit, ut elementum
-                                mauris suscipit quis. Suspendisse a sapien faucibus, fringilla
-                                erat eu, tristique dolor. Aenean lacus ligula, lacinia id
-                                pellentesque ac, tempor et sapien. Donec vehicula risus orci, et
-                                fringilla tortor venenatis vitae. Suspendisse quis suscipit
-                                nisl. Etiam quis quam justo. Nam faucibus viverra tellus sit
-                                amet posuere. Etiam eleifend quis sapien vel semper. Morbi in
-                                gravida ante. Phasellus sit amet purus vitae diam vestibulum
-                                volutpat. Ut a laoreet turpis. Mauris euismod aliquet nunc, ut
-                                consequat urna imperdiet ac. Morbi velit purus, viverra sed nisi
-                                vel, porttitor pharetra eros. Morbi nec tempor augue. Etiam
-                                ullamcorper massa ut orci venenatis mollis. Cras nec fermentum
-                                diam. Sed id purus facilisis, condimentum tellus a, semper
-                                risus. Praesent id ligula lobortis, pretium dolor non, maximus
-                                risus. Aenean vehicula pretium libero tincidunt sodales.
-                                Praesent purus justo, convallis ac ante ut, congue gravida ante.
-                                Etiam faucibus blandit justo elementum vehicula. In hac
-                                habitasse platea dictumst. Vestibulum lacinia ipsum non varius
-                                porttitor. Nullam tempor lacinia quam eu consequat. Integer in
-                                felis mi. Quisque quis enim nibh. Nam nulla turpis, pellentesque
-                                iaculis urna nec, vulputate pulvinar lacus. Suspendisse nec
-                                lectus arcu. Mauris massa metus, egestas sed varius et,
-                                ultricies a nibh. Etiam posuere augue lacus, dictum eleifend
-                                quam venenatis sit amet. Sed ut ex eros. Nam cursus scelerisque
-                                vehicula. Vestibulum ante ipsum primis in faucibus orci luctus
-                                et ultrices posuere cubilia curae; Nulla ac pharetra enim.
-                                Vestibulum eros erat, tristique ut odio ac, accumsan cursus
-                                eros. Sed maximus odio massa, nec rhoncus leo scelerisque eu.
-                                Nulla commodo quis orci eget pharetra. Ut auctor pellentesque
-                                tortor, sed facilisis magna lacinia a. Nullam vel mi sagittis,
-                                commodo dui ac, congue ex. Praesent vel posuere nisl. Aliquam
-                                volutpat bibendum orci, nec luctus magna ultricies at.
+                                <%= noticia.getText() %>
                             </p>
+                            
+                            <%  for(Imagenes element : imagenes){%>
                             <div class="div_image">
                                 <img
                                     class="image_news"
-                                    src="http://placecorgi.com/800/300"
+                                    src="<%=  element.getRuta() %>"
                                     alt="Imagen de noticia"
                                     />
                             </div>
-                            <p class="textos">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-                                finibus massa sed eros pretium malesuada. Maecenas urna augue,
-                                suscipit et orci a, volutpat mattis nulla. Vestibulum ut
-                                pharetra arcu. Curabitur eu tortor sed augue porta placerat.
-                                Pellentesque facilisis odio sit amet dolor molestie, in commodo
-                                metus interdum. Cras lobortis, purus sit amet convallis
-                                fermentum, erat neque malesuada justo, sit amet aliquet augue
-                                diam ornare mauris. Donec fringilla scelerisque arcu in
-                                volutpat. Mauris risus metus, placerat blandit congue hendrerit,
-                                accumsan nec quam. Nulla commodo ipsum velit, ut elementum
-                                mauris suscipit quis. Suspendisse a sapien faucibus, fringilla
-                                erat eu, tristique dolor. Aenean lacus ligula, lacinia id
-                                pellentesque ac, tempor et sapien. Donec vehicula risus orci, et
-                                fringilla tortor venenatis vitae. Suspendisse quis suscipit
-                                nisl. Etiam quis quam justo. Nam faucibus viverra tellus sit
-                                amet posuere. Etiam eleifend quis sapien vel semper. Morbi in
-                                gravida ante. Phasellus sit amet purus vitae diam vestibulum
-                                volutpat. Ut a laoreet turpis. Mauris euismod aliquet nunc, ut
-                                consequat urna imperdiet ac. Morbi velit purus, viverra sed nisi
-                                vel, porttitor pharetra eros. Morbi nec tempor augue. Etiam
-                                ullamcorper massa ut orci venenatis mollis. Cras nec fermentum
-                                diam. Sed id purus facilisis, condimentum tellus a, semper
-                                risus. Praesent id ligula lobortis, pretium dolor non, maximus
-                                risus. Aenean vehicula pretium libero tincidunt sodales.
-                                Praesent purus justo, convallis ac ante ut, congue gravida ante.
-                                Etiam faucibus blandit justo elementum vehicula. In hac
-                                habitasse platea dictumst. Vestibulum lacinia ipsum non varius
-                                porttitor. Nullam tempor lacinia quam eu consequat. Integer in
-                                felis mi. Quisque quis enim nibh. Nam nulla turpis, pellentesque
-                                iaculis urna nec, vulputate pulvinar lacus. Suspendisse nec
-                                lectus arcu. Mauris massa metus, egestas sed varius et,
-                                ultricies a nibh. Etiam posuere augue lacus, dictum eleifend
-                                quam venenatis sit amet. Sed ut ex eros. Nam cursus scelerisque
-                                vehicula. Vestibulum ante ipsum primis in faucibus orci luctus
-                                et ultrices posuere cubilia curae; Nulla ac pharetra enim.
-                                Vestibulum eros erat, tristique ut odio ac, accumsan cursus
-                                eros. Sed maximus odio massa, nec rhoncus leo scelerisque eu.
-                                Nulla commodo quis orci eget pharetra. Ut auctor pellentesque
-                                tortor, sed facilisis magna lacinia a. Nullam vel mi sagittis,
-                                commodo dui ac, congue ex. Praesent vel posuere nisl. Aliquam
-                                volutpat bibendum orci, nec luctus magna ultricies at.
-                            </p>
-
+                           <% } %>
+                            
+                            
+                            <%  for(Videos element : videos){%>
                             <div class="div_video">
-                                <iframe
-                                    width="420"
-                                    height="315"
-                                    src="https://www.youtube.com/embed/tgbNymZ7vqY"
-                                    >
-                                </iframe>
+                              
+                                <video width="420"  height="315" controls>
+                                        <source src="<%=  element.getRuta() %>" type="video/mp4">
+                                </video>
                             </div>
+                            <% } %>
+                            
                             <div class="valoracion">
                                 <p>Valora la noticia</p>
                                 <center>
@@ -212,6 +147,7 @@
                                     </div>
                                 </center>
                             </div>
+                            <% if(validado == "si"){ %>
                             <div class="content">
                                 <div class="comentarios">
                                     <p>Comentarios</p>
@@ -309,6 +245,13 @@
                                     </div>
                                 </div>
                             </div>
+                            <% } %>
+                            
+                            <% if(validado == "no"){ %>
+                            <br/><br/>
+                            <center> <p ><a style="color: blue;text-decoration: underline;" href="Validarnoticia?idnoticia=<%= noticia.getId()%>"> Validar </a> </p></center>
+                            <center> <p ><a style ="color:blue;text-decoration: underline;" href="newscheck"> Regresar </a> </p></center>
+                            <% } %>
                         </div>
                     </div>
                 </div>

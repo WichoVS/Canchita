@@ -26,7 +26,10 @@ if(user == null){
     display_ed = "block";
     display_cr = "block";
     }
-    
+     else if(user.isAdmin()){
+    display_ed = "block";
+    display_cr = "block";
+    }
     
    if(user != null ){
     foto = user.getAvatar();
@@ -103,7 +106,7 @@ if(user == null){
                                 <a class="sport_category" href="Perfil.jsp" style="display:<%= display %>"><%= nombre%></a>
                                 <a class="sport_category" href="Logout" style="display:<%= display %>">Cerrar Sesión</a>
                                 <a class="sport_category" href="cms.jsp" style="display:<%= display_cr %>">CMS</a>
-                                <a class="sport_category" href="newscheck.jsp" style="display:<%= display_ed %>">Validar CMS</a>
+                                <a class="sport_category" href="newscheck" style="display:<%= display_ed %>">Validar CMS</a>
                             </div>
                         </div>
                     </div>
