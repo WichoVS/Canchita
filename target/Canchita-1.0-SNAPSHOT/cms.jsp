@@ -21,6 +21,7 @@
         <link rel="stylesheet" href="css/cms.css" />
         <link rel="stylesheet" href="css/HyF.css"/>
         <script src="js/header.js" defer></script>
+        <link rel="shortcut icon" type="image/x-icon" href="assets/icono.ico" />
         <title>CMS</title>
     </head>
 

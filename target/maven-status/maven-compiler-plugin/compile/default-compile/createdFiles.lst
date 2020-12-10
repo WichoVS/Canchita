@@ -1,5 +1,7 @@
 Controllers\FileUtils.class
+Controllers\Comentario.class
 Controllers\MainServlet.class
+StatementsQueries\Marcadores.class
 Controllers\cms.class
 Controllers\newscheck.class
 Models\Comentarios.class
@@ -7,6 +9,7 @@ Models\Usuario.class
 Models\Ban.class
 Models\Noticia.class
 Models\Videos.class
+Controllers\Perfil.class
 Models\mediacms.class
 Controllers\NotciasCms.class
 StatementsQueries\SQ_Registro.class
@@ -16,8 +19,11 @@ Models\Subcomentarios.class
 Controllers\Logout.class
 Models\Redsocial.class
 Controllers\Validarnoticia.class
+Controllers\Marcador.class
+Controllers\NotiEsports.class
 DbConnection\DbConnection.class
 StatementsQueries\SQ_Usernews.class
+Controllers\Eliminar.class
 Controllers\Registro.class
 Models\Marcadores.class
 Controllers\ShowNoticia.class
@@ -25,5 +31,6 @@ Models\Valoracion.class
 StatementsQueries\SQ_NotiDepo.class
 Models\Categoria.class
 StatementsQueries\Insertcms.class
+StatementsQueries\SQ_Comentario.class
 StatementsQueries\SQ_NEWS.class
 Controllers\NotiDeportes.class

@@ -9,9 +9,12 @@
 <%@page import="Models.Videos" %>
 <%@page import="Models.Noticia"%>
 <%@page import="Models.Usuario"%>
+<%@page import="Models.Comentarios" %>
 <%@page import="java.util.List"%>
 
 <%
+    Usuario user = (Usuario) session.getAttribute("Usuario");
+    List<Comentarios> coment = (List<Comentarios>)request.getAttribute("comentarios");
     List<Imagenes> imagenes = (List<Imagenes>) request.getAttribute("imagenes");
     List<Videos> videos = (List<Videos>) request.getAttribute("videos");
     Noticia noticia = (Noticia) request.getAttribute("noticias");
@@ -30,6 +33,7 @@
         <link rel="stylesheet" href="css/noticias.css" />
         <link rel="stylesheet" href="css/HyF.css"/>
         <script src="js/header.js" defer></script>
+        <link rel="shortcut icon" type="image/x-icon" href="assets/icono.ico" />
         <title>Noticia</title>
     </head>
     <body>
@@ -47,7 +51,8 @@
                 <div class="content_news">
                     <div class="news_info">
                         <p class="title_news"><%= noticia.getTitulo()%></p>
-
+                        <% if(user != null){ %>
+                        <a class="marcador_a" href="Marcador?idnoticia=<%= noticia.getId() %>&iduser=<%= user.getId() %>">
                         <svg
                             height="28"
                             width="28"
@@ -57,7 +62,8 @@
                             name="marcador"
                             >
                         <path d="M3 3 L22 3 L22 26 L12.5 15 L3 26 Z" />
-                        </svg>
+                        </svg> </a>
+                        <% } %>
                         <svg width="25" height="25" viewBox="0 0 10 10">
                         <path
                             fill="#330a0a"
@@ -74,11 +80,11 @@
                                 <%= noticia.getText()%>
                             </p>
 
-                            <%  for (Imagenes element : imagenes) {%>
+                            <%  for (Imagenes element : imagenes) { %>
                             <div class="div_image">
                                 <img
                                     class="image_news"
-                                    src="<%=  element.getRuta()%>"
+                                    src="<%=  element.getRuta() %>"
                                     alt="Imagen de noticia"
                                     />
                             </div>
@@ -151,20 +157,27 @@
                             <div class="content">
                                 <div class="comentarios">
                                     <p>Comentarios</p>
+                                    <form method="POST" action="Comentario?idnoticia=<%= noticia.getId() %>">
                                     <textarea
                                         class="text_com"
                                         cols="100"
                                         rows="6"
+                                        name="n_comentario"
                                         placeholder="Escribe..."
                                         ></textarea
                                     ><br />
-                                    <label for="user_temp">Publicado como: </label>
+                                    <label for="user_temp">Publicar como: </label>
                                     <input
                                         type="text"
                                         id="user_temp"
-                                        placeholder="Usuario temporal"
+                                        <% if(user == null){ %>
+                                        value="Anonimo" <% }  %>
+                                        <% if(user != null){ %>
+                                        value="<%=  user.getNickname() %>" <% } %>
                                         />
-                                    <button>Agregar Comentario</button> <br /><br />
+                                    <button>Agregar Comentario</button>
+                                    </form>
+                                    <br /><br />
 
                                     <select id="filtro">
                                         <option value="Recientes">Recientes</option>
@@ -174,24 +187,26 @@
                                            >Ordenar por:</label
                                     >
                                     <hr />
+                                    
+                                    <% for(Comentarios element: coment){ %>
                                     <div class="content_comentario">
                                         <div class="image_profile">
                                             <img
-                                                src="http://placecorgi.com/800/300"
+                                                src="<%=  element.getAvatar() %>"
                                                 alt="Imagen principal"
                                                 />
                                         </div>
                                         <div class="comentario_data">
-                                            <p class="user">Usuario</p>
-                                            <p class="user_time">Hace un dia</p>
+                                            <p class="user"> <%= element.getNickname() %></p>
+                                            <p class="user_time"> <%= element.getFecha() %> </p>
+                                            
+                                            <% if(user!= null && user.isModerador()){ %>
+                                            <p class="user" > <a style="color:red;" href="Eliminar?id=<%= element.getId() %>&idnoticia=<%= noticia.getId() %>"> Eliminar </a> </p>
+                                            <%  } %>
+                                            
+                                            
                                             <p class="cometario_text">
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu leo eget nunc mattis sollicitudin in non justo. 
-                                                Vivamus viverra iaculis arcu vel malesuada. Aliquam sagittis tortor a orci placerat, sed iaculis lectus aliquet. 
-                                                Vivamus feugiat, orci in scelerisque maximus, enim magna placerat odio, vel egestas tortor nunc ut ex.
-                                                Vestibulum vel turpis justo. Nam vel tortor nec augue cursus auctor. Morbi pretium, nisi et maximus malesuada,
-                                                est ex auctor arcu, sed eleifend quam ante ac velit.
-
-
+                                                <%= element.getTexto() %>
                                             </p>
                                             <p class="ocultar">Ocultar Respuestas</p>
                                             <p class="like">-0</p>
@@ -199,7 +214,7 @@
                                             <hr />
                                         </div>
                                     </div>
-
+                                    <% } %>
                                     <div class="content_subcomentario">
                                         <div class="empty_content"></div>
                                         <div class="subcomentario">
@@ -245,6 +260,7 @@
                                     </div>
                                 </div>
                             </div>
+                                    
                             <% } %>
 
                             <% if (validado == "no") {%>

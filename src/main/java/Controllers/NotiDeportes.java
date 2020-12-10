@@ -34,7 +34,7 @@ public class NotiDeportes extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         //Si es true trae Deportes general, sino trae Esports general
-        List <Noticia> Deportes = SQ_NotiDepo.getnews(true);
+        List <Noticia> Deportes = SQ_NotiDepo.getnews();
         
         request.setAttribute("noticias", Deportes);
         request.getRequestDispatcher("Deportes.jsp").forward(request, response);

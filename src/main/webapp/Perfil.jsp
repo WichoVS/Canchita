@@ -6,7 +6,13 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="Models.Usuario"%>
-<% Usuario user = (Usuario) session.getAttribute("Usuario");%>
+<%@ page import="java.util.List" %>
+<%@ page import="Models.Noticia" %>
+<% 
+    Usuario user = (Usuario) session.getAttribute("Usuario");
+    List<Noticia> noticias = (List<Noticia>)request.getAttribute("noticias");
+
+%>
 <!DOCTYPE html>
 
 
@@ -22,6 +28,7 @@
         <link rel="stylesheet" href="css/Perfil.css"/>
         <link rel="stylesheet" href="css/HyF.css"/>
         <script src="js/header.js" defer></script>
+        <link rel="shortcut icon" type="image/x-icon" href="assets/icono.ico" />
         <title>Perfil</title>
     </head>
 
@@ -52,19 +59,21 @@
                             Noticias Marcadas
                         </section>
                         <div class="perfil-marcadas container row">
+                            <% if( noticias != null){ %>
+                            <% for( Noticia element : noticias){ %>
                             <div class="noticia-box container">
-                                <a href="noticias.jsp">
+                                <a href="ShowNoticia?idnoticia=<%= element.getId() %>">
                                     <div class="img-box container">
-                                        <img src="http://placecorgi.com/230/128" alt="" />
+                                        <img src="<%= element.getImagen() %>" alt="" />
                                     </div>
-                                    <h2>Titulo</h2>
+                                    <h2><%= element.getTitulo() %></h2>
                                     <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
-                                        fringilla enim non egestas eleifend. Donec quis tincidunt
-                                        purus. Donec elementum auctor libero, et gravida
+                                        <%= element.getDescripcion() %>
                                     </p>
                                 </a>
                             </div>
+                            <% } %>
+                            <% } %>
                         </div>
                     </div>
                 </div>

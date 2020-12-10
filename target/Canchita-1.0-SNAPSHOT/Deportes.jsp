@@ -25,6 +25,7 @@
         <link rel="stylesheet" href="css/Deportes.css"/>
         <link rel="stylesheet" href="css/HyF.css"/>
         <script src="js/header.js" defer></script>
+        <link rel="shortcut icon" type="image/x-icon" href="assets/icono.ico" />
         <title>Deportes</title>
     </head>
 
@@ -43,7 +44,7 @@
                 <div class="galeria-noticias container row">
                     <% for (Noticia NotiDeporte : news) {%>
                     <div class="noticia-box container">
-                        <a href="noticias.jsp">
+                        <a href="ShowNoticia?idnoticia=<%= NotiDeporte.getId() %>">
                             <div class="img-box container">
                                 <img src="<%= NotiDeporte.getImagen()%>" alt="FotoNoticia" />
                             </div>

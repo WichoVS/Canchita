@@ -23,15 +23,14 @@ import java.util.logging.Logger;
  */
 public class SQ_NotiDepo {
     
-         public static List<Noticia> getnews(boolean validado) {
+         public static List<Noticia> getnews() {
          List<Noticia> news = new ArrayList<>();
          Connection con = null;
         try {
             
             con = DbConnection.getConnection();
             
-            CallableStatement statement = con.prepareCall("CALL SP_Deportes_News(?);");
-            statement.setBoolean(1, validado);
+            CallableStatement statement = con.prepareCall("CALL SP_NotiDeportes_News();");
              ResultSet data = statement.executeQuery();
              while (data.next()) {
                int id = data.getInt(1);
@@ -62,4 +61,45 @@ public class SQ_NotiDepo {
         return news;
     }
     
+         
+          public static List<Noticia> getnews2() {
+         List<Noticia> news = new ArrayList<>();
+         Connection con = null;
+        try {
+            
+            con = DbConnection.getConnection();
+            
+            CallableStatement statement = con.prepareCall("CALL SP_NotiEsports_News();");
+             ResultSet data = statement.executeQuery();
+             while (data.next()) {
+               int id = data.getInt(1);
+               String tit = data.getString(2);
+               String cat = data.getString(3);
+               String text = data.getString(4);
+               String desc = data.getString(5);
+               int iduser = data.getInt(6);
+               String fecha = data.getString(7);
+               String imagen = getfirstimage(id);
+               news.add(new Noticia(id,tit,cat,desc,text,iduser,fecha,imagen));
+             }
+                return news;
+        } catch (SQLException ex) {
+            System.out.println(ex.getMessage() + "HAY UN ERROR");
+        } finally
+        {
+           if (con != null) {
+                try {
+                    con.close();
+                } catch (SQLException ex) {
+                    Logger.getLogger(SQ_Registro.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+
+            
+        }
+        return news;
+    }
+         
+         
+         
 }

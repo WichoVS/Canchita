@@ -23,6 +23,7 @@
         <link rel="stylesheet" href="css/newscheck.css" />
         <link rel="stylesheet" href="css/HyF.css"/>
         <script src="js/header.js" defer></script>
+        <link rel="shortcut icon" type="image/x-icon" href="assets/icono.ico" />
         <title>Validar noticias</title>
     </head>
 

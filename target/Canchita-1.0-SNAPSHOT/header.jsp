@@ -52,23 +52,23 @@
                 <div>
                     <a class="container sport_opc" href="NotiDeportes">Deportes </a>
                     <div id="menu_divd" style="display: block">
-                        <a class="sport_category" href="Deportes.jsp">Futbol </a>
-                        <a class="sport_category" href="Deportes.jsp"
+                        <a class="sport_category" href="NotiDeportes">Futbol </a>
+                        <a class="sport_category" href="NotiDeportes"
                            >Futbol Americano
                         </a>
-                        <a class="sport_category" href="Deportes.jsp">Baloncesto </a>
-                        <a class="sport_category" href="Deportes.jsp">Motor </a>
-                        <a class="sport_category" href="Deportes.jsp">Tenis </a>
-                        <a class="sport_category" href="Deportes.jsp">Boxeo </a>
+                        <a class="sport_category" href="NotiDeportes">Baloncesto </a>
+                        <a class="sport_category" href="NotiDeportes">Motor </a>
+                        <a class="sport_category" href="NotiDeportes">Tenis </a>
+                        <a class="sport_category" href="NotiDeportes">Boxeo </a>
                     </div>
                 </div>
                 <div>
-                    <a class="container sport_opc" href="Esports.jsp">Esports</a>
+                    <a class="container sport_opc" href="NotiEsports">Esports</a>
                     <div id="menu_dive" style="display: block">
-                        <a class="sport_category" href="Esports.jsp">Moba </a>
-                        <a class="sport_category" href="Esports.jsp">Shooter </a>
-                        <a class="sport_category" href="Esports.jsp">Estrategia </a>
-                        <a class="sport_category" href="Esports.jsp">Cartas </a>
+                        <a class="sport_category" href="NotiEsports">Moba </a>
+                        <a class="sport_category" href="NotiEsports">Shooter </a>
+                        <a class="sport_category" href="NotiEsports">Estrategia </a>
+                        <a class="sport_category" href="NotiEsports">Cartas </a>
                     </div>
                 </div>
                 <div class="search_div" id="search_div">
@@ -100,7 +100,7 @@
                     <div id="menu_divp" style="display: block">
                         <a class="sport_category" href="InicioSesion.jsp" style="display:<%= display2%>">Inicio de Sesión</a>
                         <a class="sport_category" href="Registro.jsp" style="display:<%= display2%>">Registro</a>
-                        <a class="sport_category" href="Perfil.jsp" style="display:<%= display%>"><%= nombre%></a>
+                        <a class="sport_category" href="Perfil" style="display:<%= display%>"><%= nombre%></a>
                         <a class="sport_category" href="Logout" style="display:<%= display%>">Cerrar Sesión</a>
                         <a class="sport_category" href="cms.jsp" style="display:<%= display_cr%>">CMS</a>
                         <a class="sport_category" href="newscheck" style="display:<%= display_ed%>">Validar CMS</a>

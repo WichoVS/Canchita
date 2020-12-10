@@ -42,17 +42,17 @@ p.place {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 1280px;
-    height: 720px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 
 
 .image_main > div {
     position: absolute;
     display: block;
-    margin-left: 86px;
     margin-right: auto;
-    width: 1280px;
+    width: 100%;
     height: 100px;
     background-color: #330a0a;
     color: white;
@@ -64,7 +64,7 @@ p.place {
     height: auto;
     padding: 25px;
     margin: 0px;
-    font-size: xxx-large;
+    font-size: xx-large;
 }
 .content_news {
     width: 100%;
@@ -94,7 +94,12 @@ p.rating {
     padding-right: 5px;
 }
 
-.news_info > svg {
+.marcador_a   {
+    float: right;
+    margin-right: 5px;
+}
+
+.news_info >svg {
     float: right;
     margin-right: 5px;
 }
@@ -158,7 +163,7 @@ div.div_video {
     font-size: 30px;
 }
 
-.comentarios > textarea {
+.comentarios > form >textarea {
     width: 100%;
     font-size: 100%;
     border-color: #330a0a;
@@ -171,7 +176,7 @@ div.div_video {
     margin-left: 35%;
 }
 
-.comentarios > button,
+.comentarios > form >button,
 .caja_responder > button {
     float: right;
     font-size: 20px;
@@ -185,7 +190,7 @@ div.div_video {
     color: #fff;
 }
 
-.comentarios > button:hover,
+.comentarios >form> button:hover,
 .comentario_data > button:hover {
     padding-left: 15px;
     padding-right: 15px;
