@@ -77,5 +77,5 @@ input[type = submit]:hover{
 .ajaxresponse{
     color:red;
     font-size: 18px;
-     font-family: "Barlow", sans-serif;
+    font-family: "Barlow", sans-serif;
 }

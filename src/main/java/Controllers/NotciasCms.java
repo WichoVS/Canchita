@@ -41,16 +41,16 @@ public class NotciasCms extends HttpServlet {
        Noticia news = SQ_NEWS.getnew(false,Integer.parseInt(idnoticia));
        //String imagen = SQ_NEWS.getfirstimage(Integer.parseInt(idnoticia));
        List<Imagenes> imagenes = SQ_NEWS.getimagenes(Integer.parseInt(idnoticia));
-        List<Videos> videos = SQ_NEWS.getvideos(Integer.parseInt(idnoticia));
+       List<Videos> videos = SQ_NEWS.getvideos(Integer.parseInt(idnoticia));
        Usuario usernews = SQ_Usernews.getuser(news.getIduser());
         
        request.setAttribute("usernews",usernews);
-        request.setAttribute("imagenes", imagenes);
-        request.setAttribute("videos", videos);
+       request.setAttribute("imagenes", imagenes);
+       request.setAttribute("videos", videos);
        request.setAttribute("noticias", news);
        request.setAttribute("validado", "no");
       // request.setAttribute("mainimage", imagen);
-        request.getRequestDispatcher("noticias.jsp").forward(request, response);
+       request.getRequestDispatcher("noticias.jsp").forward(request, response);
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

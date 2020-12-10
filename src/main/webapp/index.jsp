@@ -5,7 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
- <%@page import="Models.Usuario"%>  
+<%@page import="Models.Usuario"%>  
 
 <!DOCTYPE html>
 <html lang="es">
@@ -23,11 +23,11 @@
     </head>
 
     <body>
-        
-         <%-- JSP para el header --%>
-       <jsp:include page="header.jsp"/>
-       
-       
+
+        <%-- JSP para el header --%>
+        <jsp:include page="header.jsp"/>
+
+
         <div style="position: relative; top: 0px" id="content">
             <div class="principal-nota container row">
                 <div class="noticia-principal container">
@@ -98,12 +98,12 @@
                 </div>
             </div>
         </div>
-       
-        
-        
+
+
+
         <%-- JSP para el footer --%>
-         <jsp:include page="footer.jsp"/>
-        
+        <jsp:include page="footer.jsp"/>
+
     </body>
 </html>
 

@@ -4,6 +4,14 @@
     Author     : Luis
 --%>
 
+<%@ page import="Models.Noticia"%>
+<%@ page import="java.util.List"%>
+
+
+
+<%
+    List<Noticia> news = (List<Noticia>) request.getAttribute("noticias");
+%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="es">
@@ -21,9 +29,9 @@
     </head>
 
     <body>
-           <%-- JSP para el header --%>
-       <jsp:include page="header.jsp"/>
-       
+        <%-- JSP para el header --%>
+        <jsp:include page="header.jsp"/>
+
         <div class="Articulos" style="position: relative; top: 0px" id="content">
             <div class="wrapper">
                 <div class="imagen-categoria row container">
@@ -33,42 +41,25 @@
                     <section class="Seccion-Titulo container">Sub-Categoría</section>
                 </div>
                 <div class="galeria-noticias container row">
+                    <% for (Noticia NotiDeporte : news) {%>
                     <div class="noticia-box container">
                         <a href="noticias.jsp">
                             <div class="img-box container">
-                                <img src="http://placecorgi.com/500/150" alt="FotodePerro" />
+                                <img src="<%= NotiDeporte.getImagen()%>" alt="FotoNoticia" />
                             </div>
-                            <h2>Noticia Titulo</h2>
+                            <h2><%= NotiDeporte.getTitulo()%></h2>
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-                                tempus lectus leo, faucibus faucibus enim commodo vel. Maecenas
-                                molestie, arcu at commodo fermentum, velit elit vestibulum urna,
-                                quis aliquet mauris lorem a magna. Vivamus posuere pharetra nunc
-                                vel gravida. Sed a dolor turpis.
+                                <%= NotiDeporte.getDescripcion()%>
                             </p>
                         </a>
                     </div>
-                    <div class="noticia-box container">
-                        <a href="noticias.jsp">
-                            <div class="img-box container">
-                                <img src="http://placecorgi.com/500/150" alt="FotodePerro" />
-                            </div>
-                            <h2>Noticia Titulo</h2>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-                                tempus lectus leo, faucibus faucibus enim commodo vel. Maecenas
-                                molestie, arcu at commodo fermentum, velit elit vestibulum urna,
-                                quis aliquet mauris lorem a magna. Vivamus posuere pharetra nunc
-                                vel gravida. Sed a dolor turpis.
-                            </p>
-                        </a>
-                    </div>
+                    <% }%>
                 </div>
             </div>
         </div>
 
-         <%-- JSP para el footer --%>
-         <jsp:include page="footer.jsp"/>
+        <%-- JSP para el footer --%>
+        <jsp:include page="footer.jsp"/>
     </body>
 </html>
 

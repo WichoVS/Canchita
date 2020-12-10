@@ -114,12 +114,12 @@
 .correct_response{
     color:green;
     font-size: 28px;
-     font-family: "Barlow", sans-serif;
+    font-family: "Barlow", sans-serif;
 }
 .fail_response{
     color:red;
     font-size: 28px;
-     font-family: "Barlow", sans-serif;
+    font-family: "Barlow", sans-serif;
 }
 
 .redirect{

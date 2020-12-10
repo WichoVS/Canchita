@@ -49,6 +49,12 @@ and open the template in the editor.
     justify-content: center;
 }
 
+.galeria-noticias > .noticia-box> a > .img-box > img {
+    width: 100%;
+    height: auto;
+    max-height: 250px;
+}
+
 .galeria-noticias > .noticia-box > a > h2 {
     color: rgb(27, 27, 27);
     text-align: center;

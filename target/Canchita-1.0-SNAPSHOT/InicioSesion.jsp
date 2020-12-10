@@ -18,16 +18,16 @@
         <link rel="stylesheet" href="https://use.typekit.net/gkx8ybj.css">
         <link rel="stylesheet" href="css/InicioSesion.css"/>
         <link rel="stylesheet" href="css/HyF.css"/>
-         <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
         <script src="js/header.js" defer></script>
         <script src="js/login.js" async></script>
         <title>Inicio de Sesión</title>
     </head>
 
     <body>
-           <%-- JSP para el header --%>
-       <jsp:include page="header.jsp"/>
-       
+        <%-- JSP para el header --%>
+        <jsp:include page="header.jsp"/>
+
         <div
             class="inicio-sesion container row"
             style="position: relative; top: 0px"
@@ -49,9 +49,9 @@
                 <h2><a href="Registro.jsp">Registrarse</a></h2>
             </div>
         </div>
-       
-       
-      <%-- JSP para el footer --%>
-         <jsp:include page="footer.jsp"/>
+
+
+        <%-- JSP para el footer --%>
+        <jsp:include page="footer.jsp"/>
     </body>
 </html>

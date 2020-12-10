@@ -41,7 +41,7 @@ public class Noticia {
     private String categoria;
     private String descripcion;
     private String text;
-     private boolean check;
+    private boolean check;
     private int iduser;
     private String fecha;
     private String imagen;
