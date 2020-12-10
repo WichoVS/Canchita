@@ -5,7 +5,12 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="Models.Usuario"%>
+<% Usuario user = (Usuario) session.getAttribute("Usuario");%>
 <!DOCTYPE html>
+
+
+
 <html lang="es">
     <head>
         <meta charset="UTF-8" />
@@ -21,28 +26,25 @@
     </head>
 
     <body>
-     <%-- JSP para el header --%>
-         <jsp:include page="header.jsp"/>
-         
-         
+        <%-- JSP para el header --%>
+        <jsp:include page="header.jsp"/>
+
+
         <div class="Perfil" style="position: relative;top : 0px; " id="content">
             <div class="wrapper">
                 <div class="perfil-zone container">
                     <div class="perfil-opciones container">
                         <div class="img-perfil container row">
-                            <img src="assets/fakerUserImage.jpg" alt="PerfilFoto" />
+                            <img src="<%= user.getAvatar()%>" alt="PerfilFoto" />
                         </div>
                         <div class="perfil-datos container row">
-                            <h2>Nombre de Usuario</h2>
-                            <h2>Correo</h2>
-                            <h2>Red Social</h2>
-                            <h2>Red Social</h2>
+                            <h2><%= user.getNickname()%></h2>
+                            <h2><%= user.getCorreo()%></h2>
                         </div>
                         <div class="perfil-config container row">
                             <a href="">Cambiar Nombre de Usuario</a>
                             <a href="">Cambiar Correo</a>
                             <a href="">Cambiar Contraseña</a>
-                            <a href="">Cambiar Redes Sociales</a>
                         </div>
                     </div>
                     <div class="noticias-marcadas container">
@@ -68,10 +70,10 @@
                 </div>
             </div>
         </div>
-         
-         
+
+
         <%-- JSP para el footer --%>
-         <jsp:include page="footer.jsp"/>
+        <jsp:include page="footer.jsp"/>
     </body>
 </html>
 

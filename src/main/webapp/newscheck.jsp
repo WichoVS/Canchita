@@ -9,7 +9,7 @@
 <%@ page import="java.util.List"%>
 
 <%
-    List<Noticia> news = (List<Noticia>)request.getAttribute("noticias");
+    List<Noticia> news = (List<Noticia>) request.getAttribute("noticias");
 %>
 <!DOCTYPE html>
 <html lang="es">
@@ -27,38 +27,38 @@
     </head>
 
     <body>
-           <%-- JSP para el header --%>
-       <jsp:include page="header.jsp"/>
-       
-         <div class="Articulos" style="position: relative; top: 0px" id="content">
+        <%-- JSP para el header --%>
+        <jsp:include page="header.jsp"/>
+
+        <div class="Articulos" style="position: relative; top: 0px" id="content">
             <div class="wrapper">
-              
+
                 <div class="row">
                     <section class="Seccion-Titulo container">Noticias por validar:</section>
                 </div>
                 <div class="galeria-noticias container row">
-                    
-                    <% for(Noticia element: news){%>
+
+                    <% for (Noticia element : news) {%>
                     <div class="noticia-box container">
                         <a href="NotciasCms?idnoticia=<%= element.getId()%>">
                             <div class="img-box container">
-                                <img src="<%= element.getImagen() %>" alt="FotodePerro" />
+                                <img src="<%= element.getImagen()%>" alt="FotodePerro" />
                             </div>
-                            <h2> <%= element.getTitulo() %></h2>
+                            <h2> <%= element.getTitulo()%></h2>
                             <p>
-                                <%= element.getDescripcion() %>
+                                <%= element.getDescripcion()%>
                             </p>
                         </a>
                     </div>
-                    
-                    
+
+
                     <% }
                     %>
                 </div>
             </div>
         </div>
         <%-- JSP para el footer --%>
-         <jsp:include page="footer.jsp"/>
+        <jsp:include page="footer.jsp"/>
     </body>
 
 </html>

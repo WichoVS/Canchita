@@ -22,6 +22,8 @@ Controllers\Registro.class
 Models\Marcadores.class
 Controllers\ShowNoticia.class
 Models\Valoracion.class
+StatementsQueries\SQ_NotiDepo.class
 Models\Categoria.class
 StatementsQueries\Insertcms.class
 StatementsQueries\SQ_NEWS.class
+Controllers\NotiDeportes.class

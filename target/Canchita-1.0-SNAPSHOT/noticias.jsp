@@ -12,11 +12,11 @@
 <%@page import="java.util.List"%>
 
 <%
-List<Imagenes> imagenes = (List<Imagenes>)request.getAttribute("imagenes");
-List<Videos> videos = (List<Videos>)request.getAttribute("videos");
-Noticia noticia = (Noticia)request.getAttribute("noticias");
-Usuario usernews = (Usuario)request.getAttribute("usernews");
-String validado = (String)request.getAttribute("validado");
+    List<Imagenes> imagenes = (List<Imagenes>) request.getAttribute("imagenes");
+    List<Videos> videos = (List<Videos>) request.getAttribute("videos");
+    Noticia noticia = (Noticia) request.getAttribute("noticias");
+    Usuario usernews = (Usuario) request.getAttribute("usernews");
+    String validado = (String) request.getAttribute("validado");
 %>
 <!DOCTYPE html>
 <html lang="es">
@@ -33,20 +33,20 @@ String validado = (String)request.getAttribute("validado");
         <title>Noticia</title>
     </head>
     <body>
-          <%-- JSP para el header --%>
-       <jsp:include page="header.jsp"/>
-       
+        <%-- JSP para el header --%>
+        <jsp:include page="header.jsp"/>
+
         <div class="content" style="position: relative; top: 0px" id="content">
             <div class="content_center">
                 <div class="image_main">
                     <div>
-                        <p><%= noticia.getCategoria() %></p>
+                        <p><%= noticia.getCategoria()%></p>
                     </div>
-                    <img src="<%= noticia.getImagen() %>" alt="Imagen principal" />
+                    <img src="<%= noticia.getImagen()%>" alt="Imagen principal" />
                 </div>
                 <div class="content_news">
                     <div class="news_info">
-                        <p class="title_news"><%= noticia.getTitulo() %></p>
+                        <p class="title_news"><%= noticia.getTitulo()%></p>
 
                         <svg
                             height="28"
@@ -67,33 +67,33 @@ String validado = (String)request.getAttribute("validado");
                         </svg>
                         <p class="rating">5.0</p>
                         <p class="datanews">
-                            Monterrey,NL. - 5:35 p.m. Escrito por <%= usernews.getNickname() %>
+                            Monterrey,NL. - 5:35 p.m. Escrito por <%= usernews.getNickname()%>
                         </p>
                         <div class="content">
                             <p class="textos">
-                                <%= noticia.getText() %>
+                                <%= noticia.getText()%>
                             </p>
-                            
-                            <%  for(Imagenes element : imagenes){%>
+
+                            <%  for (Imagenes element : imagenes) {%>
                             <div class="div_image">
                                 <img
                                     class="image_news"
-                                    src="<%=  element.getRuta() %>"
+                                    src="<%=  element.getRuta()%>"
                                     alt="Imagen de noticia"
                                     />
                             </div>
-                           <% } %>
-                            
-                            
-                            <%  for(Videos element : videos){%>
+                            <% } %>
+
+
+                            <%  for (Videos element : videos) {%>
                             <div class="div_video">
-                              
+
                                 <video width="420"  height="315" controls>
-                                        <source src="<%=  element.getRuta() %>" type="video/mp4">
+                                    <source src="<%=  element.getRuta()%>" type="video/mp4">
                                 </video>
                             </div>
                             <% } %>
-                            
+
                             <div class="valoracion">
                                 <p>Valora la noticia</p>
                                 <center>
@@ -147,7 +147,7 @@ String validado = (String)request.getAttribute("validado");
                                     </div>
                                 </center>
                             </div>
-                            <% if(validado == "si"){ %>
+                            <% if (validado == "si") { %>
                             <div class="content">
                                 <div class="comentarios">
                                     <p>Comentarios</p>
@@ -246,12 +246,12 @@ String validado = (String)request.getAttribute("validado");
                                 </div>
                             </div>
                             <% } %>
-                            
-                            <% if(validado == "no"){ %>
+
+                            <% if (validado == "no") {%>
                             <br/><br/>
                             <center> <p ><a style="color: blue;text-decoration: underline;" href="Validarnoticia?idnoticia=<%= noticia.getId()%>"> Validar </a> </p></center>
                             <center> <p ><a style ="color:blue;text-decoration: underline;" href="newscheck"> Regresar </a> </p></center>
-                            <% } %>
+                                <% }%>
                         </div>
                     </div>
                 </div>
@@ -259,7 +259,7 @@ String validado = (String)request.getAttribute("validado");
         </div>
 
         <%-- JSP para el footer --%>
-         <jsp:include page="footer.jsp"/>
+        <jsp:include page="footer.jsp"/>
     </body>
 </html>
 
