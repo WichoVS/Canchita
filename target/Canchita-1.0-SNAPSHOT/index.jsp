@@ -7,6 +7,26 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="Models.Usuario"%>  
 
+<%@ page import="Models.Noticia"%>
+<%@ page import="java.util.List"%>
+
+
+
+<%
+    List<Noticia> Deportes = (List<Noticia>) request.getAttribute("Deportes");
+    List<Noticia> Esports = (List<Noticia>) request.getAttribute("Esports");
+    Noticia deportesBig;
+    Noticia esportsBig;
+    
+    int TamañoDep = Deportes.size();
+    int TamañoEsp = Esports.size();
+
+    Noticia auxData;
+%>
+
+<% deportesBig = Deportes.get(Deportes.size() - 1); %>
+<% esportsBig = Esports.get(Esports.size() - 1);%>
+
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -30,42 +50,58 @@
 
 
         <div style="position: relative; top: 0px" id="content">
-            <div class="principal-nota container row">
-                <div class="noticia-principal container">
-                    <div class="titulo">DAMWON Gaming Campeón del Mundo</div>
-                    <div class="desc">
-                        EL Equipo coreano se convierte en campeón del Worlds 2020.
-                    </div>
+            <a href="ShowNoticia?idnoticia=10010">
+                <div class="principal-nota container row">
+                    <div class="noticia-principal container">
+                        <div class="titulo">DAMWON Gaming Campeón del Mundo</div>
+                        <div class="desc">
+                            EL Equipo coreano se convierte en campeón del Worlds 2020.
+                        </div>
+                    </div>         
                 </div>
-            </div>
+            </a>
             <div class="wrapper">
                 <div class="row">
                     <section class="Seccion-Titulo container">Deportes</section>
                 </div>
                 <div class="Deportes-Seccion container row">
-                    <div class="left container">
+                    <a class="left container" style="background: url(<%= deportesBig.getImagen()%>);background-repeat: no-repeat;background-size: cover;"
+                       href="ShowNoticia?idnoticia=<%= deportesBig.getId()%>">
                         <div class="noticia-datos container">
-                            <div class="titulo">Titulo Noticia</div>
-                            <div class="desc">Esta es la Descripción de la noticia.</div>
+                            <div class="titulo"> <%= deportesBig.getTitulo()%></div>
+                            <div class="desc"><%= deportesBig.getDescripcion()%></div>
                         </div>
-                    </div>
+                    </a>
+
                     <div class="right container">
-                        <div class="noticia-pequeña container">
-                            <h1>Titulo de Noticia</h1>
-                            <p>Esta es la descripción de la noticia</p>
-                        </div>
-                        <div class="noticia-pequeña container">
-                            <h1>Titulo de Noticia</h1>
-                            <p>Esta es la descripción de la noticia</p>
-                        </div>
-                        <div class="noticia-pequeña container">
-                            <h1>Titulo de Noticia</h1>
-                            <p>Esta es la descripción de la noticia</p>
-                        </div>
-                        <div class="noticia-pequeña container">
-                            <h1>Titulo de Noticia</h1>
-                            <p>Esta es la descripción de la noticia</p>
-                        </div>
+                        <% if (TamañoDep >= 2) {%>
+                        <% auxData = Deportes.get(TamañoDep - 2);%>
+                        <a class="noticia-pequeña container" href="ShowNoticia?idnoticia=<%= auxData.getId()%>">
+                            <h1><%=  auxData.getTitulo()%></h1>
+                            <p><%=  auxData.getDescripcion()%></p>
+                        </a>
+                        <% }%>
+                        <% if (TamañoDep >= 3) {%>
+                        <% auxData = Deportes.get(TamañoDep - 3);%>
+                        <a class="noticia-pequeña container" href="ShowNoticia?idnoticia=<%= auxData.getId()%>">
+                            <h1><%=  auxData.getTitulo()%></h1>
+                            <p><%=  auxData.getDescripcion()%></p>
+                        </a>
+                        <% }%>
+                        <% if (TamañoDep >= 4) {%>
+                        <% auxData = Deportes.get(TamañoDep - 4);%>
+                        <a class="noticia-pequeña container" href="ShowNoticia?idnoticia=<%= auxData.getId()%>">
+                            <h1><%=  auxData.getTitulo()%></h1>
+                            <p><%=  auxData.getDescripcion()%></p>
+                        </a>
+                        <% }%>
+                        <% if (TamañoDep >= 5) {%>
+                        <% auxData = Deportes.get(TamañoDep - 5);%>
+                        <a class="noticia-pequeña container" href="ShowNoticia?idnoticia=<%= auxData.getId()%>">
+                            <h1><%=  auxData.getTitulo()%></h1>
+                            <p><%=  auxData.getDescripcion()%></p>
+                        </a>
+                        <% }%>
                     </div>
                 </div>
                 <div class="row">
@@ -73,29 +109,42 @@
                 </div>
                 <div class="Esports-Seccion container row">
                     <div class="left container">
-                        <div class="noticia-pequeña container">
-                            <h1>Titulo de Noticia</h1>
-                            <p>Esta es la descripción de la noticia</p>
-                        </div>
-                        <div class="noticia-pequeña container">
-                            <h1>Titulo de Noticia</h1>
-                            <p>Esta es la descripción de la noticia</p>
-                        </div>
-                        <div class="noticia-pequeña container">
-                            <h1>Titulo de Noticia</h1>
-                            <p>Esta es la descripción de la noticia</p>
-                        </div>
-                        <div class="noticia-pequeña container">
-                            <h1>Titulo de Noticia</h1>
-                            <p>Esta es la descripción de la noticia</p>
-                        </div>
+                        <% if (TamañoEsp >= 2) {%>
+                        <% auxData = Esports.get(TamañoEsp - 2);%>
+                        <a class="noticia-pequeña container" href="ShowNoticia?idnoticia=<%= auxData.getId()%>">
+                            <h1><%=  auxData.getTitulo()%></h1>
+                            <p><%=  auxData.getDescripcion()%></p>
+                        </a>
+                        <% }%>
+                        <% if (TamañoEsp >= 3) {%>
+                        <% auxData = Esports.get(TamañoEsp - 3);%>
+                        <a class="noticia-pequeña container" href="ShowNoticia?idnoticia=<%= auxData.getId()%>">
+                            <h1><%=  auxData.getTitulo()%></h1>
+                            <p><%=  auxData.getDescripcion()%></p>
+                        </a>
+                        <% }%>
+                        <% if (TamañoEsp >= 4) {%>
+                        <% auxData = Esports.get(TamañoEsp - 4);%>
+                        <a class="noticia-pequeña container" href="ShowNoticia?idnoticia=<%= auxData.getId()%>">
+                            <h1><%=  auxData.getTitulo()%></h1>
+                            <p><%=  auxData.getDescripcion()%></p>
+                        </a>
+                        <% }%>
+                        <% if (TamañoEsp >= 5) {%>
+                        <% auxData = Esports.get(TamañoEsp - 5);%>
+                        <a class="noticia-pequeña container" href="ShowNoticia?idnoticia=<%= auxData.getId()%>">
+                            <h1><%=  auxData.getTitulo()%></h1>
+                            <p><%=  auxData.getDescripcion()%></p>
+                        </a>
+                        <% }%>
                     </div>
-                    <div class="right container">
+                    <a class="right container" style="background: url(<%= esportsBig.getImagen()%>);background-repeat: no-repeat;background-size: cover;" 
+                       href="ShowNoticia?idnoticia=<%= esportsBig.getId()%>">
                         <div class="noticia-datos container">
-                            <div class="titulo">Titulo Noticia</div>
-                            <div class="desc">Esta es la Descripción de la noticia.</div>
+                            <div class="titulo"><%= esportsBig.getTitulo()%></div>
+                            <div class="desc"><%= esportsBig.getDescripcion()%></div>
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>

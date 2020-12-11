@@ -215,49 +215,6 @@
                                         </div>
                                     </div>
                                     <% } %>
-                                    <div class="content_subcomentario">
-                                        <div class="empty_content"></div>
-                                        <div class="subcomentario">
-                                            <div class="content_comentario">
-                                                <div class="image_profile">
-                                                    <img
-                                                        src="http://placecorgi.com/800/300"
-                                                        alt="Imagen principal"
-                                                        />
-                                                </div>
-                                                <div class="comentario_data">
-                                                    <p class="user">Usuario</p>
-                                                    <p class="user_time">Hace un dia</p>
-                                                    <p class="cometario_text">
-                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu leo eget nunc mattis sollicitudin in non justo.
-                                                        Vivamus viverra iaculis arcu vel malesuada. Aliquam sagittis tortor a orci placerat, sed iaculis lectus aliquet. 
-                                                        Vivamus feugiat, orci in scelerisque maximus, enim magna placerat odio, vel egestas tortor nunc ut ex. 
-                                                        Vestibulum vel turpis justo. Nam vel tortor nec augue cursus auctor. Morbi pretium, nisi et maximus malesuada, 
-                                                        est ex auctor arcu, sed eleifend quam ante ac velit.
-
-
-                                                    </p>
-                                                    <p class="like">-0</p>
-                                                    <p class="like">+0</p>
-
-                                                    <br />
-                                                    <hr />
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="caja_responder">
-                                        <textarea
-                                            name=""
-                                            id=""
-                                            cols="30"
-                                            rows="4"
-                                            class="contestar"
-                                            placeholder="Escribe un comentario"
-                                            ></textarea>
-                                        <br />
-                                        <button>Responder</button>
-                                    </div>
                                 </div>
                             </div>
                                     

@@ -35,8 +35,11 @@ public class NotiDeportes extends HttpServlet {
             throws ServletException, IOException {
         //Si es true trae Deportes general, sino trae Esports general
         List <Noticia> Deportes = SQ_NotiDepo.getnews();
+        String bCat = request.getParameter("depSubCat");
+        
         
         request.setAttribute("noticias", Deportes);
+        request.setAttribute("v_subCat", bCat);
         request.getRequestDispatcher("Deportes.jsp").forward(request, response);
     }
         // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

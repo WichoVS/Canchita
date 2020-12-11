@@ -32,10 +32,11 @@ public class NotiEsports extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-       
+       String bCat = request.getParameter("depSubCat");
             List <Noticia> data = SQ_NotiDepo.getnews2();
         
         request.setAttribute("noticias", data);
+        request.setAttribute("v_subCat", bCat);
         request.getRequestDispatcher("Esports.jsp").forward(request, response);
         
     }

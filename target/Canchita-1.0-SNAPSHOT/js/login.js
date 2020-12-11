@@ -26,7 +26,7 @@ $.ajax({
         $('#ajaxresponse').show();
           
     }else{
-        document.formulario.action = "index.jsp";
+        document.formulario.action = "NoticiasPrincipal";
         document.formulario.method = "POST";
                 document.formulario.submit();
     }

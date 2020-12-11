@@ -41,7 +41,7 @@
     <div class="wrapper">
         <div class="headerbox container row">
             <div class="logo container">
-                <a class="container" href="index.jsp"
+                <a class="container" href="NoticiasPrincipal"
                    ><img
                         class="imagen"
                         src="assets/Logo.png"
@@ -50,25 +50,25 @@
             </div>
             <div class="navopc container">
                 <div>
-                    <a class="container sport_opc" href="NotiDeportes">Deportes </a>
+                    <a class="container sport_opc" href="NotiDeportes?depSubCat=General">Deportes </a>
                     <div id="menu_divd" style="display: block">
-                        <a class="sport_category" href="NotiDeportes">Futbol </a>
-                        <a class="sport_category" href="NotiDeportes"
+                        <a class="sport_category" href="NotiDeportes?depSubCat=Futbol">Futbol </a>
+                        <a class="sport_category" href="NotiDeportes?depSubCat=FutbolAmericano"
                            >Futbol Americano
                         </a>
-                        <a class="sport_category" href="NotiDeportes">Baloncesto </a>
-                        <a class="sport_category" href="NotiDeportes">Motor </a>
-                        <a class="sport_category" href="NotiDeportes">Tenis </a>
-                        <a class="sport_category" href="NotiDeportes">Boxeo </a>
+                        <a class="sport_category" href="NotiDeportes?depSubCat=Baloncesto">Baloncesto </a>
+                        <a class="sport_category" href="NotiDeportes?depSubCat=Motor">Motor </a>
+                        <a class="sport_category" href="NotiDeportes?depSubCat=Tenis">Tenis </a>
+                        <a class="sport_category" href="NotiDeportes?depSubCat=Boxeo">Boxeo </a>
                     </div>
                 </div>
                 <div>
-                    <a class="container sport_opc" href="NotiEsports">Esports</a>
+                    <a class="container sport_opc" href="NotiEsports?depSubCat=General">Esports</a>
                     <div id="menu_dive" style="display: block">
-                        <a class="sport_category" href="NotiEsports">Moba </a>
-                        <a class="sport_category" href="NotiEsports">Shooter </a>
-                        <a class="sport_category" href="NotiEsports">Estrategia </a>
-                        <a class="sport_category" href="NotiEsports">Cartas </a>
+                        <a class="sport_category" href="NotiEsports?depSubCat=Moba">MOBA </a>
+                        <a class="sport_category" href="NotiEsports?depSubCat=Shooter">Shooter </a>
+                        <a class="sport_category" href="NotiEsports?depSubCat=Estrategia">Estrategia </a>
+                        <a class="sport_category" href="NotiEsports?depSubCat=Cartas">Cartas </a>
                     </div>
                 </div>
                 <div class="search_div" id="search_div">

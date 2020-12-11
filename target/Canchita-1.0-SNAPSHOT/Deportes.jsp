@@ -11,6 +11,7 @@
 
 <%
     List<Noticia> news = (List<Noticia>) request.getAttribute("noticias");
+    String subCat = (String)request.getAttribute("v_subCat");
 %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -39,10 +40,11 @@
                     <img src="assets/Deportes.jpg" alt="FotoDeportes" />
                 </div>
                 <div class="row">
-                    <section class="Seccion-Titulo container">Sub-Categoría</section>
+                    <section class="Seccion-Titulo container"><%= subCat %></section>
                 </div>
                 <div class="galeria-noticias container row">
-                    <% for (Noticia NotiDeporte : news) {%>
+                    <% for (Noticia NotiDeporte : news) { %>
+                    <%if(NotiDeporte.getCategoria().equals(subCat) || subCat.equals("General")){%>
                     <div class="noticia-box container">
                         <a href="ShowNoticia?idnoticia=<%= NotiDeporte.getId() %>">
                             <div class="img-box container">
@@ -54,6 +56,7 @@
                             </p>
                         </a>
                     </div>
+                            <% } %>
                     <% }%>
                 </div>
             </div>

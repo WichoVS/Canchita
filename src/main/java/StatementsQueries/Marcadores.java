@@ -27,7 +27,7 @@ public class Marcadores {
             
             CallableStatement statement = con.prepareCall("CALL SP_Marcador(?,?);");
             statement.setInt(1, idnoticia);
-             statement.setInt(2, iduser);
+            statement.setInt(2, iduser);
          
               return statement.executeUpdate(); 
         } catch (SQLException ex) {

@@ -1,3 +1,10 @@
+a {
+    color: white;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+
 .principal-nota {
     flex-flow: column;
     width: 100%;
@@ -28,7 +35,7 @@
 }
 
 .Seccion-Titulo {
-    height: 70%;
+    height: 4%;
     font-size: 20px;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -51,7 +58,7 @@
 .Deportes-Seccion > .left > .noticia-datos {
     flex-flow: column;
     background-color: rgb(51, 10, 10,0.6);
-    height: 15%;
+    height: 33%;
     width: 100%;
 }
 
@@ -61,7 +68,7 @@
     font-weight: bold;
 }
 
-.Deportes-Seccion > .left > .noticia-datos > .desc {
+.Deportes-Seccion > .left > .noticia-datos >.desc {
     font-size: 20px;
     color: white;
 }
@@ -80,11 +87,12 @@
 
 .Deportes-Seccion > .right > .noticia-pequeña > h1 {
     color: #330a0a;
+    font-size: 22px;
 }
 
 .Deportes-Seccion > .right > .noticia-pequeña > p {
     color: #330a0a;
-    font-size: 12px;
+    font-size: 16px;
 }
 
 .Esports-Seccion {
@@ -106,11 +114,12 @@
 
 .Esports-Seccion > .left > .noticia-pequeña > h1 {
     color: #330a0a;
+    font-size: 22px;
 }
 
 .Esports-Seccion > .left > .noticia-pequeña > p {
     color: #330a0a;
-    font-size: 12px;
+    font-size: 16px;
 }
 
 .Esports-Seccion > .right {
@@ -124,7 +133,7 @@
 .Esports-Seccion > .right > .noticia-datos {
     flex-flow: column;
     background-color: rgb(51, 10, 10,0.6);
-    height: 15%;
+    height: 33%;
     width: 100%;
 }
 
